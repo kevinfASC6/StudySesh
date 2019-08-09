@@ -4,7 +4,7 @@
  Team Member Names:
  Axel Boly,   
  Zhaul Gonzalez,  
- Marcus Moise, and
+ Marcus Moise, 
  Kevin Feng   
  
  App Name: StudySesh  
