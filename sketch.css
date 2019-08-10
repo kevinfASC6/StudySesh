@@ -1,10 +1,11 @@
 #SchoolName{
-    /* display: none; */
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 #header{
     display:flex;
     justify-content: space-between;
+    background-color: cornflowerblue;
 }
 
 /* Dropdown Button */
@@ -20,6 +21,7 @@
   .dropdown {
     position: relative;
     display: none;
+    justify-content: center;
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -38,6 +40,7 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    text-align: center;
   }
   
   /* Change color of dropdown links on hover */
@@ -48,3 +51,10 @@
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+#Submit{
+    display:center;
+    width: 40vw;
+    font-size: 14px;
+    height:10vw;
+}
