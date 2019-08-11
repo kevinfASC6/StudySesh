@@ -23,4 +23,26 @@ document.getElementById("schoolForm").style.fontStyle="14pt";
       x.style.display = "none";
     }
   }
+} 
+
+let search = document.getElementById("Submit");  
+let inputVal = document.getElementById("schoolForm")
+
+search.addEventListener('click', searchPlace); 
+ 
+function findPlace(name) {
+    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json`; 
+    fetch(url) 
+    .then((response) => response.json()) 
+    .then(function(data) { 
+        console.log(data);   
+          
+    }) 
+    .catch(function(error)  {
+    console.log(error);
+    })
+}
+ 
+function searchPlace() { 
+  findPlace(inputVal.location_name); 
 }
