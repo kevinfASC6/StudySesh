@@ -18,16 +18,14 @@ var uiConfig = {
           firebase.auth.FacebookAuthProvider.PROVIDER_ID,
           firebase.auth.TwitterAuthProvider.PROVIDER_ID,
           firebase.auth.GithubAuthProvider.PROVIDER_ID,
-          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
         ],
         // tosUrl and privacyPolicyUrl accept either url string or a callback
         // function.
         // Terms of service url/callback.
-        tosUrl: '<your-tos-url>',
+        tosUrl: 'https://google.com',
         // Privacy policy url/callback.
-        privacyPolicyUrl: function() {
-          window.location.assign('https://google.com');
-        }
+        privacyPolicyUrl: 'https://google.com';
       };
 
       // Initialize the FirebaseUI Widget using Firebase.
