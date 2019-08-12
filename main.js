@@ -8,7 +8,7 @@ let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementById("BackSubject");
 //let SelectedCourse = document.getElementById("BackCourse");
 
-// var marcusMysteryButton = document.createElement("button").innerText
+
 
 
 document.getElementById("schoolForm").style.width= "40vw";
