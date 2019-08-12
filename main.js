@@ -6,7 +6,23 @@ let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementsByClassName("BackSubject"); 
 let displayRanGen = document.getElementById("randomGenerator");   
-
+function findPlace(name) {
+  var x = document.getElementsByClassName("dropdown")[0]
+    console.log('nani')
+    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
+    fetch(url) 
+    .then((response) => response.json()) 
+    .then(function(data) { 
+        console.log(data);  
+        let name = data.location_name 
+        console.log(name)      
+        console.log(makeid(5));   
+        displayRanGen.innerText = "Your Code: " + makeid(5)
+    })
+    .catch(function(error)  {
+    console.log(error);
+    })
+}
 var x = document.getElementsByClassName("dropdown")[0]
 let SelectedCourse = document.getElementById("BackCourse");
 document.getElementById("schoolForm").style.width= "40vw";
@@ -19,21 +35,6 @@ function showSubject(){
 let search = document.getElementsByClassName("Submit")[0];
 let inputVal = document.getElementById("schoolForm")
 search.addEventListener('click', searchPlace); 
-function findPlace(name) {
-    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
-    fetch(url) 
-    .then((response) => response.json()) 
-    .then(function(data) { 
-        console.log(data);  
-        let name = data.location_name 
-        console.log(name)      
-        console.log(makeid(5));   
-        displayRanGen.innerText = "Your Code: " + makeid(5)
-    }) 
-    .catch(function(error)  {
-    console.log(error);
-    })
-}
 function searchPlace() {  
 let value = inputVal.value 
 if(value.toLowerCase() === value.toLowerCase())
@@ -59,6 +60,7 @@ function filldiv1(){
   Selected.innerText = "Math"
   y.style.display = "block"
   x.style.display = "none"
+  sessionCode()
 }
 historySubject.addEventListener("click",filldiv2)
 function filldiv2(){
@@ -66,6 +68,7 @@ var x = document.getElementsByClassName("dropdown")[0]
 Selected.innerText = "History"
 x.style.display = "none"
 a.style.display = "block"
+sessionCode()
 }
 scienceSubject.addEventListener("click",filldiv3)
 function filldiv3(){
@@ -74,6 +77,7 @@ Selected.innerText = "Science"
 d.style.display = "block"
 x.style.display = "none"
 b.style.display = "block"
+sessionCode()
 }
 englishSubject.addEventListener("click",filldiv4)
 function filldiv4(){
@@ -81,6 +85,7 @@ var x = document.getElementsByClassName("dropdown")[0]
 Selected.innerText = "English"
 x.style.display = "none"
 c.style.display = "block"
+sessionCode()
 }
 worldLang.addEventListener("click",filldiv5)
 function filldiv5(){
@@ -88,6 +93,7 @@ function filldiv5(){
   Selected.innerText = "World Language"
   x.style.display = "none"
   d.style.display = "block"
+  sessionCode()
 }   
 
 
@@ -109,4 +115,8 @@ function reset(){
   c.style.display = "none"
   d.style.display = "none"
   x.style.display = "block"
+}
+
+function sessionCode(){
+  displayRanGen.style.display = "block"
 }

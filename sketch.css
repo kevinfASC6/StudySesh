@@ -19,7 +19,9 @@ body{
     /* background-color: lightblue; */
 
 }
-
+#randomGenerator{
+  display:none;
+}
 #header img{
   width: 10%;
   height: 130px;
