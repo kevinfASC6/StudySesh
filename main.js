@@ -33,13 +33,9 @@ function findPlace(name) {
     .then((response) => response.json()) 
     .then(function(data) { 
         console.log(data);  
-        let name = data.location_name 
-        let school = new School(name)   
-        console.log(school)
-        createPokemonElement(school)
-
-          
-    }) 
+        let name = data.location_name    
+        console.log(name)
+      }) 
     .catch(function(error)  {
     console.log(error);
     })
