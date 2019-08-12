@@ -77,13 +77,13 @@ body{
 
   .dropdown:hover{margin-bottom: 220px;}
 
-#Submit{
+.Submit{
     width: 80px;
     font-size: 14px;
     height:21px;
     margin-top: 18px;
 }
-#SubjectSelect{
+.SubjectSelect{
   width: 80px;
   font-size: 14px;
   height:21px;
