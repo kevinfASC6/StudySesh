@@ -1,10 +1,10 @@
  let SchoolName = document.getElementById("SchoolName").innerText
 
-let mathSubject = getElementById("Math");
-let historySubject = getElementById("History");
-let scienceSubject = getElementById("Science");
-let englishSubject = getElementById("English");
-let worldLanguageSubject = getElementById("World Language");
+let mathSubject = document.getElementById("Math");
+let historySubject = document.getElementById("History");
+let scienceSubject = document.getElementById("Science");
+let englishSubject = document.getElementById("English");
+let worldLanguageSubject = document.getElementById("World Language");
 
 
 document.getElementById("schoolForm").style.width= "40vw";
@@ -51,27 +51,30 @@ let science = document.getElementById("Science")
 let english = document.getElementById("English")
 let worldLang = document.getElementById("WorldLanguage")
 let y = document.getElementsByClassName("dropdown")[1]
+let a = document.getElementsByClassName("dropdown")[2]
+let b = document.getElementsByClassName("dropdown")[3]
+let c = document.getElementsByClassName("dropdown")[4]
+let d = document.getElementsByClassName("dropdown")[5]
 // function test(){
 //     document.getElementById("CourseSelect").innerText = 
 // }
 math.addEventListener("click", filldiv1)
 function filldiv1(){
-  Subject = "Math"
   y.style.display = "block"
 }
-// history.addEventListener
-// function filldiv2(){
-//   a.style.display = 
-// }
-// science.addEventListener
-// function filldiv3(){
-//   Subject = "Science"
-// }
-// english.addEventListener
-// function filldiv4(){
-//   Subject = "English"
-// }
-// worldLang.addEventListener
-// function filldiv5(){
-//   Subject = "World Language"
-// }
+historySubject.addEventListener("click",filldiv2)
+function filldiv2(){
+  a.style.display = "block"
+}
+scienceSubject.addEventListener("click",filldiv3)
+function filldiv3(){
+  b.style.display = "block"
+}
+englishSubject.addEventListener("click",filldiv4)
+function filldiv4(){
+  c.style.display = "block"
+}
+worldLanguageSubject.addEventListener("click",filldiv5)
+function filldiv5(){
+  d.style.display = "block"
+}
