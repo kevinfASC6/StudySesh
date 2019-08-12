@@ -1,3 +1,6 @@
+body{
+  background-color: lavender;
+}
 #SchoolName{
     display: flex;
     justify-content: center;
