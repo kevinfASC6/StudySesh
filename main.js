@@ -5,7 +5,7 @@ document.getElementById("schoolForm").style.fontStyle="14pt";
   function showSubject(){
     if(SchoolName != ""){
     var x = document.getElementsByClassName("dropdown")[0]
-    x.style.display = "inline";
+    x.style.display = "block";
   }
 } 
 
@@ -33,7 +33,8 @@ function findPlace(name) {
 }
  
 function searchPlace() {  
-  let value = inputVal.value
+  let value = inputVal.value 
+  if(value.toLowerCase() === value.toLowerCase())
   findPlace(value.trim()); 
 }
 let Subject = document.getElementById("SubjectSelect").innerText

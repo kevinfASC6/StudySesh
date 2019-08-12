@@ -40,6 +40,7 @@ body{
     position: relative;
     display: none;
     justify-content: center;
+    margin-bottom: 10px;
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -69,6 +70,8 @@ body{
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: rgb(113, 72, 156)}
+
+  .dropdown:hover{margin-bottom: 220px;}
 
 #Submit{
     display:center;
