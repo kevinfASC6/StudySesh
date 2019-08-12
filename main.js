@@ -5,7 +5,7 @@ document.getElementById("schoolForm").style.fontStyle="14pt";
   function showSubject(){
     if(SchoolName != ""){
     var x = document.getElementsByClassName("dropdown")[0]
-    x.style.display = "block";
+    x.style.display = "inline";
   }
 } 
 
