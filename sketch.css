@@ -1,5 +1,7 @@
 body{
   background-color: lavender;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 #SchoolName{
     display: flex;
@@ -44,7 +46,9 @@ body{
     position: relative;
     display: none;
     justify-content: center;
+    margin: 0px;
     margin-bottom: 10px;
+    width: 95px;
   }
   
   /* Dropdown Content (Hidden by Default) */
