@@ -114,8 +114,12 @@ console.log(makeid(5));
 
 function reset(){
   x.style.display = "block"
-  if(Subject == "Math"){
-    y.style.display = "inline"
+  if(Subject != ""){
+    y.style.hide = "none"
+    a.style.display = "none"
+    b.style.display = "none"
+    c.style.display = "none"
+    d.style.display = "none"
   }
 }
 
