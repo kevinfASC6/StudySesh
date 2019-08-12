@@ -6,6 +6,7 @@ let scienceSubject = document.getElementById("Science");
 let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementById("BackSubject");
+var x = document.getElementsByClassName("dropdown")[0]
 //let SelectedCourse = document.getElementById("BackCourse");
 
 
@@ -15,7 +16,6 @@ document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
   function showSubject(){
     if(SchoolName != ""){
-    var x = document.getElementsByClassName("dropdown")[0]
     x.style.display = "block";
   }
 } 
@@ -97,4 +97,10 @@ function filldiv5(){
   Selected.innerText = "World Language"
   x.style.display = "none"
   d.style.display = "block"
+}
+function reset(){
+  x.style.display = "block"
+  if(Subject == "Math"){
+    y.style.display = "inline"
+  }
 }
