@@ -5,6 +5,7 @@ let historySubject = document.getElementById("History");
 let scienceSubject = document.getElementById("Science");
 let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
+let Selected = document.getElementById('SubjectSelect');
 
 
 document.getElementById("schoolForm").style.width= "40vw";
@@ -61,6 +62,7 @@ let d = document.getElementsByClassName("dropdown")[5]
 math.addEventListener("click", filldiv1)
 function filldiv1(){
   var x = document.getElementsByClassName("dropdown")[0]
+  Selected.innerText = "Math"
   y.style.display = "block"
   x.style.display = "none"
 }
