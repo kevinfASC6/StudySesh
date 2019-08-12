@@ -1,15 +1,14 @@
- let SchoolName = document.getElementById("SchoolName").innerText
+let SchoolName = document.getElementById("SchoolName").innerText
 
 let mathSubject = document.getElementById("Math");
 let historySubject = document.getElementById("History");
 let scienceSubject = document.getElementById("Science");
 let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
-
 let Selected = document.getElementById("BackSubject");
+var x = document.getElementsByClassName("dropdown")[0]
 //let SelectedCourse = document.getElementById("BackCourse");
 
-// var marcusMysteryButton = document.createElement("button").innerText
 
 
 
@@ -17,7 +16,6 @@ document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
   function showSubject(){
     if(SchoolName != ""){
-    var x = document.getElementsByClassName("dropdown")[0]
     x.style.display = "block";
   }
 } 
@@ -28,14 +26,18 @@ let inputVal = document.getElementById("schoolForm")
 search.addEventListener('click', searchPlace); 
  
 function findPlace(name) {
-    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
+    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?location_name=${name}`; 
     fetch(url) 
     .then((response) => response.json()) 
     .then(function(data) { 
         console.log(data);  
-        let name = data.location_name    
-        console.log(name)
-      }) 
+        let name = data.location_name 
+        let school = new School(name)   
+        console.log(school)
+        createPokemonElement(school)
+
+          
+    }) 
     .catch(function(error)  {
     console.log(error);
     })
@@ -43,7 +45,7 @@ function findPlace(name) {
  
 function searchPlace() {  
   let value = inputVal.value 
-
+  if(value.toLowerCase() === value.toLowerCase())
   findPlace(value.trim()); 
 }
 let Subject = document.getElementById("BackSubject").innerText
@@ -63,32 +65,11 @@ let d = document.getElementsByClassName("dropdown")[5]
 // }
 math.addEventListener("click", filldiv1)
 function filldiv1(){
-
-  Subject = "Math"
-  y.style.display = "inline"
-}
-// history.addEventListener
-// function filldiv2(){
-//   Subject = "History"
-// }
-// science.addEventListener
-// function filldiv3(){
-//   Subject = "Science"
-// }
-// english.addEventListener
-// function filldiv4(){
-//   Subject = "English"
-// }
-// worldLang.addEventListener
-// function filldiv5(){
-//   Subject = "World Language"
-// }
-
   var x = document.getElementsByClassName("dropdown")[0]
   Selected.innerText = "Math"
   y.style.display = "block"
   x.style.display = "none"
-
+}
 historySubject.addEventListener("click",filldiv2)
 function filldiv2(){
   var x = document.getElementsByClassName("dropdown")[0]
@@ -128,7 +109,16 @@ function makeid(length) {
   return result;
 }
 
+
 console.log(makeid(5));
 
 
+
+
+function reset(){
+  x.style.display = "block"
+  if(Subject == "Math"){
+    y.style.display = "inline"
+  }
+}
 

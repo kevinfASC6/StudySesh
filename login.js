@@ -9,6 +9,7 @@ var firebaseConfig = {
     appId: "1:527300603970:web:d0cd1d4569892599"
   };
   // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 var uiConfig = {
         signInSuccessUrl: '<url-to-redirect-to-on-success>',
         signInOptions: [
@@ -18,7 +19,6 @@ var uiConfig = {
           firebase.auth.TwitterAuthProvider.PROVIDER_ID,
           firebase.auth.GithubAuthProvider.PROVIDER_ID,
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
-          firebase.auth.PhoneAuthProvider.PROVIDER_ID
         ],
         // tosUrl and privacyPolicyUrl accept either url string or a callback
         // function.
