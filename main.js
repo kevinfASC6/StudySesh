@@ -91,7 +91,7 @@ function filldiv4(){
   x.style.display = "none"
   c.style.display = "block"
 }
-worldLanguageSubject.addEventListener("click",filldiv5)
+worldLang.addEventListener("click",filldiv5)
 function filldiv5(){
   var x = document.getElementsByClassName("dropdown")[0]
   Selected.innerText = "World Language"
@@ -109,15 +109,9 @@ function makeid(length) {
   return result;
 }
 
-
-console.log(makeid(5));
-
-
-
-
 function reset(){
   x.style.display = "block"
-  if(Subject != ""){
+  if(Subject == "Math"){
     y.style.hide = "none"
     a.style.display = "none"
     b.style.display = "none"
