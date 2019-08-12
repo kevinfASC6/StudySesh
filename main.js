@@ -26,17 +26,14 @@ let inputVal = document.getElementById("schoolForm")
 search.addEventListener("click", searchPlace); 
  
 function findPlace(name) {
-    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?location_name=${name}`; 
+    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
     fetch(url) 
     .then((response) => response.json()) 
     .then(function(data) { 
         console.log(data);  
         let name = data.location_name 
-        let school = new School(name)   
-        console.log(school)
-        createPokemonElement(school)
-
-          
+        console.log(name)      
+        console.log(makeid(5)); 
     }) 
     .catch(function(error)  {
     console.log(error);
@@ -91,13 +88,15 @@ function filldiv4(){
   x.style.display = "none"
   c.style.display = "block"
 }
-worldLanguageSubject.addEventListener("click",filldiv5)
+worldLang.addEventListener("click",filldiv5)
 function filldiv5(){
   var x = document.getElementsByClassName("dropdown")[0]
   Selected.innerText = "World Language"
   x.style.display = "none"
   d.style.display = "block"
-}  
+}   
+
+let displayRanGen = document.getElementById('randomGenerator'); 
 
 function makeid(length) {
   var result           = "";
@@ -107,18 +106,18 @@ function makeid(length) {
      result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
   return result;
-}
-
-
-console.log(makeid(5));
+} 
+console.log(makeid(5)); 
 
 
 
 
 function reset(){
-  x.style.display = "block"
-  if(Subject == "Math"){
-    y.style.display = "inline"
-  }
+    y.style.display = "none"
+    a.style.display = "none"
+    b.style.display = "none"
+    c.style.display = "none"
+    d.style.display = "none"
+    x.style.display = "block"
 }
 
