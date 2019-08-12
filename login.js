@@ -12,13 +12,6 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  var uiConfig = {
-      'signInSuccessUrl': 'main.html',
-      'signInOptions': [
-          firebase.auth.EmailAuthProvider.PROVIDER_ID
-      ]
-  };
-
   var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
   var uiConfig = {
