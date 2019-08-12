@@ -5,7 +5,7 @@ document.getElementById("schoolForm").style.fontStyle="14pt";
   function showSubject(){
     if(SchoolName != ""){
     var x = document.getElementsByClassName("dropdown")[0]
-    x.style.display = "block";
+    x.style.display = "inline";
   }
 } 
 
@@ -36,56 +36,34 @@ function searchPlace() {
   let value = inputVal.value
   findPlace(value.trim()); 
 }
-
-
-function createPokemonElement(pokemon){ 
-  //h1 tag for name  
-  let h1 = document.createElement("h1");  
-  h1.innerText = pokemon.name;
-  //h2 tag fo number  
-  let h2 = document.createElement("h2"); 
-  h2.innerHTML = pokemon.number; 
-  //p tag for types 
-  let p = document.createElement("p"); 
-  for(let type of pokemon.types) { 
-      p.innerText += `${type}`; 
-  }
-  //ul tag for moves  
-  let moveUl = document.createElement("ul"); 
-  for(let move of pokemon.moves) { 
-      moveUl.innerHTML += `<li>${move}</li>`; 
-  }
-  //ul tag for abilities  
-  let abilityUl = document.createElement("ul"); 
-  for(let ability of pokemon.abilities) { 
-      abilityUl.innerHTML += `<li>${ability}</li>`; 
-  } 
-  //h1 tag for image 
-  let img = document.createElement("img"); 
-  img.src = pokemon.image; 
-  //div container for pokemon element 
-  let div = document.createElement("div"); 
-  div.append(h1, h2, p, moveUl, abilityUl, img); 
-  fluidContainer.appendChild(div);  
-}
-
-let math = document.getElementById("SubjectSelect").innerHTML
+let Subject = document.getElementById("SubjectSelect").innerText
+let math = document.getElementById("Math")
+let history = document.getElementById("History")
+let science = document.getElementById("Science")
+let english = document.getElementById("English")
+let worldLang = document.getElementById("WorldLanguage")
+let y = document.getElementsByClassName("dropdown")[1]
 // function test(){
 //     document.getElementById("CourseSelect").innerText = 
 // }
-
+math.addEventListener("click", filldiv1)
 function filldiv1(){
-  math = "Math"
+  Subject = "Math"
+  y.style.display = "inline"
 }
-function filldiv2(){
-  math = "History"
-}
-function filldiv3(){
-  math = "Science"
-}
-function filldiv4(){
-  math = "English"
-}
-function filldiv5(){
-  math = "World Language"
-}
+// history.addEventListener
+// function filldiv2(){
+//   Subject = "History"
+// }
+// science.addEventListener
+// function filldiv3(){
+//   Subject = "Science"
+// }
+// english.addEventListener
+// function filldiv4(){
+//   Subject = "English"
+// }
+// worldLang.addEventListener
+// function filldiv5(){
+//   Subject = "World Language"
+// }
