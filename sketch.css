@@ -98,3 +98,10 @@ button{
   border: solid 1px black;
   background-color: rgb(155, 218, 136);
 }
+
+.BackSubject{
+  width: 80px;
+  font-size: 14px;
+  height:21px;
+  display: inline;
+}
