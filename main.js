@@ -15,11 +15,16 @@ let inputVal = document.getElementById("schoolForm")
 search.addEventListener('click', searchPlace); 
  
 function findPlace(name) {
-    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json`; 
+    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?location_name=${name}`; 
     fetch(url) 
     .then((response) => response.json()) 
     .then(function(data) { 
-        console.log(data);   
+        console.log(data);  
+        let name = data.location_name 
+        let school = new School(name)   
+        console.log(school)
+        createPokemonElement(school)
+
           
     }) 
     .catch(function(error)  {
@@ -28,7 +33,7 @@ function findPlace(name) {
 }
  
 function searchPlace() { 
-  findPlace(inputVal.location_name); 
+  findPlace(inputVal.value); 
 }
 let math = document.getElementById("SubjectSelect").innerText
 // function test(){
