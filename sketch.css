@@ -54,7 +54,10 @@
 
 #Submit{
     display:center;
-    width: 40vw;
+    width: 80px;
     font-size: 14px;
-    height:10vw;
+    height:20px;
+}
+#SchoolName{
+  display: inline;
 }

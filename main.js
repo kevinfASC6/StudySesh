@@ -31,6 +31,6 @@ function searchPlace() {
   findPlace(inputVal.location_name); 
 }
 document.getElementsByClassName("dropdown-content")[0].addEventListener('click', test)
-function test(){
-    document.getElementById("CourseSelect").innerText = "2"
-}
+// function test(){
+//     document.getElementById("CourseSelect").innerText = 
+// }
