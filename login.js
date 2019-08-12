@@ -9,6 +9,7 @@ var firebaseConfig = {
     appId: "1:527300603970:web:d0cd1d4569892599"
   };
   // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 var uiConfig = {
         signInSuccessUrl: '<url-to-redirect-to-on-success>',
         signInOptions: [
