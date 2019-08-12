@@ -30,7 +30,23 @@ function findPlace(name) {
 function searchPlace() { 
   findPlace(inputVal.location_name); 
 }
-document.getElementsByClassName("dropdown-content")[0].addEventListener('click', test)
+let math = document.getElementById("SubjectSelect").innerHTML
 // function test(){
 //     document.getElementById("CourseSelect").innerText = 
 // }
+
+function filldiv1(){
+  math = "Math"
+}
+function filldiv2(){
+  math = "History"
+}
+function filldiv3(){
+  math = "Science"
+}
+function filldiv4(){
+  math = "English"
+}
+function filldiv5(){
+  math = "World Language"
+}

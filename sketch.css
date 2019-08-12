@@ -4,8 +4,23 @@
 }
 #header{
     display:flex;
-    justify-content: space-between;
-    background-color: cornflowerblue;
+    justify-content: center;
+    flex-direction: row;
+    background: linear-gradient(to bottom, lavender, purple);
+    /* background-color: lightblue; */
+
+}
+
+#header img{
+  width: 10%;
+  height: 130px;
+}
+
+#header h1{
+  text-align: center;
+  background: -webkit-linear-gradient(rgb(98, 1, 107), rgb(21, 1, 24));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Dropdown Button */
