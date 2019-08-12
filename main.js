@@ -4,7 +4,9 @@ let historySubject = document.getElementById("History");
 let scienceSubject = document.getElementById("Science");
 let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
-let Selected = document.getElementsByClassName("BackSubject")[0];
+let Selected = document.getElementById("BackSubject"); 
+let displayRanGen = document.getElementById("randomGenerator");   
+
 var x = document.getElementsByClassName("dropdown")[0]
 let SelectedCourse = document.getElementById("BackCourse");
 document.getElementById("schoolForm").style.width= "40vw";
@@ -18,18 +20,19 @@ let search = document.getElementsByClassName("Submit")[0];
 let inputVal = document.getElementById("schoolForm")
 search.addEventListener('click', searchPlace); 
 function findPlace(name) {
-  let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
-  fetch(url)
-  .then((response) => response.json()) 
-  .then(function(data) { 
-  console.log(data); 
-  let name = data.location_name 
-  console.log(name) 
-  console.log(makeid(5)); 
-  })
-  .catch(function(error)  {
-  console.log(error);
-})
+    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
+    fetch(url) 
+    .then((response) => response.json()) 
+    .then(function(data) { 
+        console.log(data);  
+        let name = data.location_name 
+        console.log(name)      
+        console.log(makeid(5));   
+        displayRanGen.innerText = "Your Code: " + makeid(5)
+    }) 
+    .catch(function(error)  {
+    console.log(error);
+    })
 }
 function searchPlace() {  
 let value = inputVal.value 
@@ -81,21 +84,22 @@ c.style.display = "block"
 }
 worldLang.addEventListener("click",filldiv5)
 function filldiv5(){
-var x = document.getElementsByClassName("dropdown")[0]
-Selected.innerText = "World Language"
-x.style.display = "none"
-d.style.display = "block"
-}
-let displayRanGen = document.getElementById('randomGenerator'); 
+  var x = document.getElementsByClassName("dropdown")[0]
+  Selected.innerText = "World Language"
+  x.style.display = "none"
+  d.style.display = "block"
+}   
+
+
 function makeid(length) {
-var result           = ''; 
-var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-var charactersLength = characters.length;
-for ( var i = 0; i < length; i++ ) {
-result += characters.charAt(Math.floor(Math.random() * charactersLength));
-}
-return result;
-}
+  var result           = '';
+  var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+  for ( var i = 0; i < length; i++ ) {
+     result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  } 
+  return result;   
+} 
 console.log(makeid(5)); 
 
 function reset(){
