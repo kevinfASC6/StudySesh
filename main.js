@@ -1,10 +1,10 @@
  let SchoolName = document.getElementById("SchoolName").innerText
 
-let mathSubject = getElementById("Math");
-let historySubject = getElementById("History");
-let scienceSubject = getElementById("Science");
-let englishSubject = getElementById("English");
-let worldLanguageSubject = getElementById("World Language");
+let mathSubject = document.getElementById("Math");
+let historySubject = document.getElementById("History");
+let scienceSubject = document.getElementById("Science");
+let englishSubject = document.getElementById("English");
+let worldLanguageSubject = document.getElementById("World Language");
 
 
 document.getElementById("schoolForm").style.width= "40vw";
@@ -22,7 +22,7 @@ let inputVal = document.getElementById("schoolForm")
 search.addEventListener('click', searchPlace); 
  
 function findPlace(name) {
-    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?location_name=${name}`; 
+    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
     fetch(url) 
     .then((response) => response.json()) 
     .then(function(data) { 
@@ -40,7 +40,7 @@ function findPlace(name) {
 }
  
 function searchPlace() {  
-  let valueCase = inputVal.value 
+  let value = inputVal.value 
 
   findPlace(value.trim()); 
 }
