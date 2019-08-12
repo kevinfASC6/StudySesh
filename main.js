@@ -30,7 +30,7 @@ function findPlace(name) {
 function searchPlace() { 
   findPlace(inputVal.location_name); 
 }
-let math = document.getElementById("SubjectSelect").innerHTML
+let math = document.getElementById("SubjectSelect").innerText
 // function test(){
 //     document.getElementById("CourseSelect").innerText = 
 // }
