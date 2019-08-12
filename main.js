@@ -30,23 +30,34 @@ function findPlace(name) {
 function searchPlace() { 
   findPlace(inputVal.location_name); 
 }
-let math = document.getElementById("SubjectSelect").innerHTML
+let Subject = document.getElementById("SubjectSelect").innerText
+let math = document.getElementById("Math")
+let history = document.getElementById("History")
+let science = document.getElementById("Science")
+let english = document.getElementById("English")
+let worldLang = document.getElementById("WorldLanguage")
+let y = document.getElementsByClassName("dropdown")[1]
 // function test(){
 //     document.getElementById("CourseSelect").innerText = 
 // }
-
+math.addEventListener("click", filldiv1)
 function filldiv1(){
-  math = "Math"
+  Subject = "Math"
+  y.style.display = "inline"
 }
-function filldiv2(){
-  math = "History"
-}
-function filldiv3(){
-  math = "Science"
-}
-function filldiv4(){
-  math = "English"
-}
-function filldiv5(){
-  math = "World Language"
-}
+// history.addEventListener
+// function filldiv2(){
+//   Subject = "History"
+// }
+// science.addEventListener
+// function filldiv3(){
+//   Subject = "Science"
+// }
+// english.addEventListener
+// function filldiv4(){
+//   Subject = "English"
+// }
+// worldLang.addEventListener
+// function filldiv5(){
+//   Subject = "World Language"
+// }
