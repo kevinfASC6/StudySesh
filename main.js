@@ -26,17 +26,14 @@ let inputVal = document.getElementById("schoolForm")
 search.addEventListener('click', searchPlace); 
  
 function findPlace(name) {
-    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?location_name=${name}`; 
+    let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
     fetch(url) 
     .then((response) => response.json()) 
     .then(function(data) { 
         console.log(data);  
         let name = data.location_name 
-        let school = new School(name)   
-        console.log(school)
-        createPokemonElement(school)
-
-          
+        console.log(name)      
+        console.log(makeid(5)); 
     }) 
     .catch(function(error)  {
     console.log(error);
@@ -97,7 +94,9 @@ function filldiv5(){
   Selected.innerText = "World Language"
   x.style.display = "none"
   d.style.display = "block"
-}  
+}   
+
+let displayRanGen = document.getElementById('randomGenerator'); 
 
 function makeid(length) {
   var result           = '';
@@ -105,12 +104,10 @@ function makeid(length) {
   var charactersLength = characters.length;
   for ( var i = 0; i < length; i++ ) {
      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  return result;
-}
-
-
-console.log(makeid(5));
+  } 
+  return result; 
+} 
+console.log(makeid(5)); 
 
 
 
