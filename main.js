@@ -1,10 +1,10 @@
  let SchoolName = document.getElementById("SchoolName").innerText
 
-let mathSubject = getElementById("Math");
-let historySubject = getElementById("History");
-let scienceSubject = getElementById("Science");
-let englishSubject = getElementById("English");
-let worldLanguageSubject = getElementById("World Language");
+let mathSubject = document.getElementById("Math");
+let historySubject = document.getElementById("History");
+let scienceSubject = document.getElementById("Science");
+let englishSubject = document.getElementById("English");
+let worldLanguageSubject = document.getElementById("World Language");
 
 
 document.getElementById("schoolForm").style.width= "40vw";
