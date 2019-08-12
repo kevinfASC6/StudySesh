@@ -33,8 +33,8 @@ function findPlace(name) {
 }
  
 function searchPlace() {  
-  let value = inputVal.value 
-  if(value.toLowerCase() === value.toLowerCase())
+  let valueCase = inputVal.value 
+
   findPlace(value.trim()); 
 }
 let Subject = document.getElementById("SubjectSelect").innerText
@@ -50,11 +50,11 @@ let y = document.getElementsByClassName("dropdown")[1]
 math.addEventListener("click", filldiv1)
 function filldiv1(){
   Subject = "Math"
-  y.style.display = "block"
+  y.style.display = "inline"
 }
 // history.addEventListener
 // function filldiv2(){
-//   a.style.display = 
+//   Subject = "History"
 // }
 // science.addEventListener
 // function filldiv3(){
