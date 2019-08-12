@@ -1,5 +1,7 @@
 body{
   background-color: lavender;
+  margin-left: 0px;
+    margin-right: 0px;
 }
 #SchoolName{
     display: flex;
@@ -15,7 +17,6 @@ body{
     flex-direction: row;
     background: linear-gradient(to bottom, lavender, purple);
     /* background-color: lightblue; */
-
 }
 
 #header img{
