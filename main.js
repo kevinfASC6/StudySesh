@@ -33,7 +33,8 @@ function findPlace(name) {
 }
  
 function searchPlace() {  
-  let value = inputVal.value
+  let value = inputVal.value 
+  if(value.toLowerCase() === value.toLowerCase())
   findPlace(value.trim()); 
 }
 let Subject = document.getElementById("SubjectSelect").innerText
