@@ -89,7 +89,7 @@ body{
   height:21px;
   margin-top: 18px;
 }
- #Submit{
+ .Submit{
   border: solid 1px black;
   background-color: rgb(103, 148, 185);
 }
