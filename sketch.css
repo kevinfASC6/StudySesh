@@ -1,16 +1,34 @@
+body{
+  background-color: lavender;
+}
 #SchoolName{
     display: flex;
     justify-content: center;
 }
 #header{
     display:flex;
-    justify-content: space-between;
-    background-color: cornflowerblue;
+    justify-content: center;
+    flex-direction: row;
+    background: linear-gradient(to bottom, lavender, purple);
+    /* background-color: lightblue; */
+
+}
+
+#header img{
+  width: 10%;
+  height: 130px;
+}
+
+#header h1{
+  text-align: center;
+  background: -webkit-linear-gradient(rgb(98, 1, 107), rgb(21, 1, 24));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: rgb(113, 72, 156);
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -50,7 +68,7 @@
   .dropdown:hover .dropdown-content {display: block;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .dropdown:hover .dropbtn {background-color: rgb(113, 72, 156);}
 
 #Submit{
     display:center;

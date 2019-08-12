@@ -36,6 +36,7 @@ function searchPlace() {
   findPlace(inputVal.value); 
 }
 
+
 function createPokemonElement(pokemon){ 
   //h1 tag for name  
   let h1 = document.createElement("h1");  
@@ -64,5 +65,26 @@ function createPokemonElement(pokemon){
   //div container for pokemon element 
   let div = document.createElement("div"); 
   div.append(h1, h2, p, moveUl, abilityUl, img); 
-  fluidContainer.appendChild(div); 
+  fluidContainer.appendChild(div);  
+}
+
+let math = document.getElementById("SubjectSelect").innerHTML
+// function test(){
+//     document.getElementById("CourseSelect").innerText = 
+// }
+
+function filldiv1(){
+  math = "Math"
+}
+function filldiv2(){
+  math = "History"
+}
+function filldiv3(){
+  math = "Science"
+}
+function filldiv4(){
+  math = "English"
+}
+function filldiv5(){
+  math = "World Language"
 }
