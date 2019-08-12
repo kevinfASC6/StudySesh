@@ -32,8 +32,9 @@ function findPlace(name) {
     })
 }
  
-function searchPlace() { 
-  findPlace(inputVal.value); 
+function searchPlace() {  
+  let value = inputVal.value
+  findPlace(value.trim()); 
 }
 let Subject = document.getElementById("SubjectSelect").innerText
 let math = document.getElementById("Math")
@@ -48,11 +49,11 @@ let y = document.getElementsByClassName("dropdown")[1]
 math.addEventListener("click", filldiv1)
 function filldiv1(){
   Subject = "Math"
-  y.style.display = "inline"
+  y.style.display = "block"
 }
 // history.addEventListener
 // function filldiv2(){
-//   Subject = "History"
+//   a.style.display = 
 // }
 // science.addEventListener
 // function filldiv3(){
