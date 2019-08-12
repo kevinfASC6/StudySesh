@@ -5,7 +5,7 @@ document.getElementById("schoolForm").style.fontStyle="14pt";
   function showSubject(){
     if(SchoolName != ""){
     var x = document.getElementsByClassName("dropdown")[0]
-    x.style.display = "block";
+    x.style.display = "inline";
   }
 } 
 
@@ -35,7 +35,6 @@ function findPlace(name) {
 function searchPlace() { 
   findPlace(inputVal.value); 
 }
-<<<<<<< HEAD
 let Subject = document.getElementById("SubjectSelect").innerText
 let math = document.getElementById("Math")
 let history = document.getElementById("History")
@@ -43,9 +42,6 @@ let science = document.getElementById("Science")
 let english = document.getElementById("English")
 let worldLang = document.getElementById("WorldLanguage")
 let y = document.getElementsByClassName("dropdown")[1]
-=======
-let math = document.getElementById("SubjectSelect").innerText
->>>>>>> 14162886254f37648ae6643e62d123770a181733
 // function test(){
 //     document.getElementById("CourseSelect").innerText = 
 // }
