@@ -6,7 +6,7 @@ let scienceSubject = document.getElementById("Science");
 let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementById("BackSubject");
-
+//let SelectedCourse = document.getElementById("BackCourse");
 
 // var marcusMysteryButton = document.createElement("button").innerText
 
@@ -49,6 +49,7 @@ function searchPlace() {
   findPlace(value.trim()); 
 }
 let Subject = document.getElementById("BackSubject").innerText
+//let Course = document.getElementById("BackCourse").innerText
 let math = document.getElementById("Math")
 let history = document.getElementById("History")
 let science = document.getElementById("Science")
