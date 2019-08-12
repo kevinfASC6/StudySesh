@@ -11,7 +11,7 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 var uiConfig = {
-        signInSuccessUrl: '<url-to-redirect-to-on-success>',
+        signInSuccessUrl: 'https://kevinfasc6.github.io/StudySesh/',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
           firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -26,7 +26,7 @@ var uiConfig = {
         tosUrl: '<your-tos-url>',
         // Privacy policy url/callback.
         privacyPolicyUrl: function() {
-          window.location.assign('<your-privacy-policy-url>');
+          window.location.assign('https://google.com');
         }
       };
 
