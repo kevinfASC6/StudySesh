@@ -1,5 +1,12 @@
  let SchoolName = document.getElementById("SchoolName").innerText
 
+let mathSubject = getElementById("Math");
+let historySubject = getElementById("History");
+let scienceSubject = getElementById("Science");
+let englishSubject = getElementById("English");
+let worldLanguageSubject = getElementById("World Language");
+
+
 document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
   function showSubject(){
