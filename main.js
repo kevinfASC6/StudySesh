@@ -32,8 +32,9 @@ function findPlace(name) {
     })
 }
  
-function searchPlace() { 
-  findPlace(inputVal.value); 
+function searchPlace() {  
+  let value = inputVal.value
+  findPlace(value.trim()); 
 }
 let Subject = document.getElementById("SubjectSelect").innerText
 let math = document.getElementById("Math")
