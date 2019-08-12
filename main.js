@@ -60,21 +60,31 @@ let d = document.getElementsByClassName("dropdown")[5]
 // }
 math.addEventListener("click", filldiv1)
 function filldiv1(){
+  var x = document.getElementsByClassName("dropdown")[0]
   y.style.display = "block"
+  x.style.display = "none"
 }
 historySubject.addEventListener("click",filldiv2)
 function filldiv2(){
+  var x = document.getElementsByClassName("dropdown")[0]
+  x.style.display = "none"
   a.style.display = "block"
 }
 scienceSubject.addEventListener("click",filldiv3)
 function filldiv3(){
+  var x = document.getElementsByClassName("dropdown")[0]
+  x.style.display = "none"
   b.style.display = "block"
 }
 englishSubject.addEventListener("click",filldiv4)
 function filldiv4(){
+  var x = document.getElementsByClassName("dropdown")[0]
+  x.style.display = "none"
   c.style.display = "block"
 }
 worldLanguageSubject.addEventListener("click",filldiv5)
 function filldiv5(){
+  var x = document.getElementsByClassName("dropdown")[0]
+  x.style.display = "none"
   d.style.display = "block"
 }
