@@ -92,6 +92,11 @@ body{
  .Submit{
   border: solid 1px black;
   background-color: rgb(103, 148, 185);
+  width: 80px;
+  font-size: 14px;
+  height:21px;
+  display: inline;
+  margin-top: 18px;
 }
 
 button{
@@ -104,4 +109,5 @@ button{
   font-size: 14px;
   height:21px;
   display: inline;
+  margin-top: 18px;
 }

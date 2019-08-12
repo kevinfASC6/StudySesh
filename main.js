@@ -4,7 +4,7 @@ let historySubject = document.getElementById("History");
 let scienceSubject = document.getElementById("Science");
 let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
-let Selected = document.getElementById("BackSubject"); 
+let Selected = document.getElementsByClassName("BackSubject"); 
 let displayRanGen = document.getElementById("randomGenerator");   
 
 var x = document.getElementsByClassName("dropdown")[0]
