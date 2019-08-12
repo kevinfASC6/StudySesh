@@ -129,7 +129,6 @@ function filldiv5(){
   d.style.display = "block"
 }
 
-<<<<<<< HEAD
 function reset(){
   x.style.display = "block"
   y.style.display = "hidden"
@@ -138,5 +137,3 @@ function reset(){
   c.style.display = "hidden"
   d.style.display = "hidden"
 }
-=======
->>>>>>> 7337c2644b2b74818c2eff1fee66a81e26917efe
