@@ -48,11 +48,11 @@ let y = document.getElementsByClassName("dropdown")[1]
 math.addEventListener("click", filldiv1)
 function filldiv1(){
   Subject = "Math"
-  y.style.display = "inline"
+  y.style.display = "block"
 }
 // history.addEventListener
 // function filldiv2(){
-//   Subject = "History"
+//   a.style.display = 
 // }
 // science.addEventListener
 // function filldiv3(){
