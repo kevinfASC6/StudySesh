@@ -101,6 +101,7 @@ function filldiv5(){
 function reset(){
   x.style.display = "block"
   if(Subject == "Math"){
-    y.style.display = "inline"
+    y.style.display = "none"
+    d.style.display = "block"
   }
 }
