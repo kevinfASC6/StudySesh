@@ -6,11 +6,12 @@
 #inputForm{
 background-color: darkmagenta;
 width:200px;
+display: flex;
+justify-content: center;
 }
 
 .allMessages{
     background-color: palevioletred;
-    height: 300px;
 
 }
 #Header{

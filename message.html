@@ -19,21 +19,23 @@
         firebase.initializeApp(firebaseConfig); 
         </script>
         
-        <script src="message.js" defer></script>
-        <link rel="stylesheet" href="messages.css">
+        <script src="message.js" defer></script> 
+        <script src="main.js" defer></script>
+        <link rel="stylesheet" href="messages.css" >
+    
 </head>
 <body> 
-    <div id = "Header">
-        <h1>StudySesh Chat Room</h1>
-    </div>
-        <!--This div will be populated with messages-->
-        <div id = "BoxContent">
-        <!--For user to input messages-->
-        <div class="allMessages">
-            
+        <!--Add your name-->
+        <div id = "Header">
+        <h1>StudySesh</h1>
         </div>
+        <div id = "BoxContent">
+        <!--This div will be populated with messages-->
+        <div class="allMessages"></div>
+        <div id = "inputForm">
+        <!--For user to input messages-->
         <div class="userContainer">
-            <form id = "inputForm">
+            <form>
                 <div class="inputContainer">
                     <div class="singleInput">
                         <label for="username">Your name:</label>
@@ -48,5 +50,6 @@
             </form>
         </div>
     </div>
+</div>
 </body>
 </html>
