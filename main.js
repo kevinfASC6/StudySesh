@@ -60,7 +60,6 @@ function filldiv1(){
   Selected.innerText = "Math"
   y.style.display = "block"
   x.style.display = "none"
-  sessionCode()
 }
 historySubject.addEventListener("click",filldiv2)
 function filldiv2(){
@@ -68,7 +67,6 @@ var x = document.getElementsByClassName("dropdown")[0]
 Selected.innerText = "History"
 x.style.display = "none"
 a.style.display = "block"
-sessionCode()
 }
 scienceSubject.addEventListener("click",filldiv3)
 function filldiv3(){
@@ -77,7 +75,6 @@ Selected.innerText = "Science"
 d.style.display = "block"
 x.style.display = "none"
 b.style.display = "block"
-sessionCode()
 }
 englishSubject.addEventListener("click",filldiv4)
 function filldiv4(){
@@ -85,7 +82,6 @@ var x = document.getElementsByClassName("dropdown")[0]
 Selected.innerText = "English"
 x.style.display = "none"
 c.style.display = "block"
-sessionCode()
 }
 worldLang.addEventListener("click",filldiv5)
 function filldiv5(){
@@ -93,7 +89,6 @@ function filldiv5(){
   Selected.innerText = "World Language"
   x.style.display = "none"
   d.style.display = "block"
-  sessionCode()
 }   
 
 
@@ -115,8 +110,26 @@ function reset(){
   c.style.display = "none"
   d.style.display = "none"
   x.style.display = "block"
+  displayRanGen.innerText = ""
+  Create.style.display = "none"
 }
 
 function sessionCode(){
   displayRanGen.style.display = "block"
+  Join.style.display = "none"
+}
+Create = document.getElementById('NewChat')
+Join = document.getElementById('CodeForm')
+function showCreateJoin(){
+  y.style.display = "none"
+  a.style.display = "none"
+  b.style.display = "none"
+  c.style.display = "none"
+  d.style.display = "none"
+  Create.style.display = "inline"
+}
+
+function insertSessionCode(){
+Join.style.display = "block"
+displayRanGen.style.display = "none"
 }

@@ -33,7 +33,12 @@ body{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+#NewChat{
+  display: none;
+}
+#CodeForm{
+  display:none;
+}
 /* Dropdown Button */
 .dropbtn {
     background-color: rgb(113, 72, 156);
