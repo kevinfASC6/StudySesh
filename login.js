@@ -1,4 +1,5 @@
 
+console.log("getting somewhere");
 var firebaseConfig = {
     apiKey: "AIzaSyDXqHdzV8IoYakz4tr5rhDHL4NAfXTh4ak",
     authDomain: "study-sesh-10dbf.firebaseapp.com",
