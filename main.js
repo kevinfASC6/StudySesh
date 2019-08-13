@@ -8,7 +8,7 @@ let Selected = document.getElementsByClassName("BackSubject");
 let displayRanGen = document.getElementById("randomGenerator");   
 let redirectMsg = document.getElementById('redirMsg');  
 
-redirectMsg.addEventListener("click", readMsg); 
+// redirectMsg.addEventListener("click", readMsg); 
 
 function readMsg() { 
   window.location.href = "message.html"
