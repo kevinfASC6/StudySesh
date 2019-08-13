@@ -24,7 +24,7 @@ function findPlace(name) {
     })
 }
 var x = document.getElementsByClassName("dropdown")[0]
-let SelectedCourse = document.getElementById("BackCourse");
+  SelectedCourse = document.getElementById("BackCourse");
 document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
 function showSubject(){
@@ -32,8 +32,8 @@ function showSubject(){
   x.style.display = "block";
   }
 } 
-let search = document.getElementsByClassName("Submit")[0];
-let inputVal = document.getElementById("schoolForm")
+    search = document.getElementsByClassName("Submit")[0];
+  inputVal = document.getElementById("schoolForm")
 search.addEventListener('click', searchPlace); 
 function searchPlace() {  
 let value = inputVal.value 
