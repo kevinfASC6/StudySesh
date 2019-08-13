@@ -13,7 +13,7 @@ const database = firebase.database().ref(roomCode)
  * Updates the database with the username and message.
  */  
 
-let randCode = document.getElementById('CodeForm')
+randCode = document.getElementById('CodeForm')
 
 database.on('child_added', displayMessage) 
 function displayMessage(row) { 
