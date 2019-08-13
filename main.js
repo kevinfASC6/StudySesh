@@ -5,28 +5,7 @@ let scienceSubject = document.getElementById("Science");
 let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementsByClassName("BackSubject"); 
-let displayRanGen = document.getElementById("randomGenerator");  
-let search = document.getElementsByClassName("Submit")[0];
-let inputVal = document.getElementById("schoolForm") 
-var x = document.getElementsByClassName("dropdown")[0]
-let SelectedCourse = document.getElementById("BackCourse");
-
-  
-
-function makeRand() { 
-  displayRanGen.innerText = "Your Code: " + makeid(5)
-}
-
-
-document.getElementById("schoolForm").style.width= "40vw";
-document.getElementById("schoolForm").style.fontStyle="14pt";
-function showSubject(){
-  if(SchoolName != ""){
-  x.style.display = "block";
-  }
-} 
-
-search.addEventListener('click', searchPlace); 
+let displayRanGen = document.getElementById("randomGenerator");   
 function findPlace(name) {
   var x = document.getElementsByClassName("dropdown")[0]
     console.log('nani')
@@ -38,8 +17,8 @@ function findPlace(name) {
         let name = data.location_name 
         console.log(name)      
         console.log(makeid(5));   
-      
-    }) 
+        displayRanGen.innerText = "Your Code is: " + makeid(5)
+    })
     .catch(function(error)  {
     console.log(error);
     })
@@ -122,7 +101,7 @@ function makeid(length) {
   } 
   return result;   
 } 
- 
+console.log(makeid(5)); 
 
 function reset(){
   y.style.display = "none"
@@ -134,6 +113,27 @@ function reset(){
   displayRanGen.innerText = ""
   Create.style.display = "none"
 }
+
+function sessionCode(){
+  displayRanGen.style.display = "block"
+  Join.style.display = "none"
+}
+Create = document.getElementById('NewChat')
+Join = document.getElementById('CodeForm')
+function showCreateJoin(){
+  y.style.display = "none"
+  a.style.display = "none"
+  b.style.display = "none"
+  c.style.display = "none"
+  d.style.display = "none"
+  Create.style.display = "inline"
+}
+
+function insertSessionCode(){
+Join.style.display = "block"
+displayRanGen.style.display = "none"
+}
+Create.style.display = "none"
 
 function sessionCode(){
   displayRanGen.style.display = "block"
