@@ -1,6 +1,6 @@
 const usernameElement = document.getElementById("username");
 const messageElement = document.getElementById("message");
-let button = document.getElementById("submitButton");
+const button = document.getElementById("submitButton");
 button.addEventListener('click',updateDB);
 
 //Set database object here
