@@ -24,11 +24,7 @@ function findPlace(name) {
     })
 }
 var x = document.getElementsByClassName("dropdown")[0]
-<<<<<<< HEAD
  SelectedCourse = document.getElementById("BackCourse");
-=======
-  SelectedCourse = document.getElementById("BackCourse");
->>>>>>> 16bacf0faebc658d4dbd1265e18bb1473860b6f1
 document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
 function showSubject(){
@@ -36,13 +32,8 @@ function showSubject(){
   x.style.display = "block";
   }
 } 
-<<<<<<< HEAD
  search = document.getElementsByClassName("Submit")[0];
  inputVal = document.getElementById("schoolForm")
-=======
-    search = document.getElementsByClassName("Submit")[0];
-  inputVal = document.getElementById("schoolForm")
->>>>>>> 16bacf0faebc658d4dbd1265e18bb1473860b6f1
 search.addEventListener('click', searchPlace); 
 function searchPlace() {  
 let value = inputVal.value 
