@@ -1,10 +1,11 @@
 const usernameElement = document.getElementById("username");
 const messageElement = document.getElementById("message");
-const button = document.getElementById("submitButton");
+const button = document.getElementById("submitButton"); 
+const roomCode = localStorage.getItem("randCodeGen"); 
 button.addEventListener('click',updateDB);
-
 //Set database object here
-const database = firebase.database().ref()
+console.log(roomCode)
+const database = firebase.database().ref(roomCode)
 
 /**
  * Updates the database with the username and message.
@@ -42,4 +43,8 @@ function addMessageToBoard(rowData) {
     pElement.innerHTML = `${row.USERNAME}: ${row.MESSAGE}`  
 
     messageBoard.appendChild(pElement)
+} 
+
+window.onload = function(){
+    console.log(roomCode);
 }
