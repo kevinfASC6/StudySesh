@@ -21,17 +21,18 @@
         
         <script src="message.js" defer></script> 
         <script src="main.js" defer></script>
+        <link rel="stylesheet" href="messages.css" >
     
 </head>
 <body> 
         <!--Add your name-->
+        <div id = "Header">
         <h1>StudySesh</h1>
-
-        <!--This div will be populated with messages-->
-        <div class="allMessages">
-            
         </div>
-        
+        <div id = "BoxContent">
+        <!--This div will be populated with messages-->
+        <div class="allMessages"></div>
+        <div id = "inputForm">
         <!--For user to input messages-->
         <div class="userContainer">
             <form>
@@ -48,6 +49,7 @@
                 <button id="submitButton">Submit</button>
             </form>
         </div>
-    
+    </div>
+</div>
 </body>
 </html>
