@@ -11,6 +11,7 @@ let redirectMsg = document.getElementById('redirMsg');
 redirectMsg.addEventListener('click', readMsg); 
 
 function readMsg() { 
+  localStorage.setItem("randCodeGen",document.getElementById("CodeEnter"));
   window.location.href = "message.html"
 }
 
@@ -27,7 +28,7 @@ function findPlace(name) {
         console.log(makeid(5));   
         var code =makeid(5)
         displayRanGen.innerText = "Your Code is: " + code
-        localStorage.setItem("randCodeGen",code);
+
     })
     .catch(function(error)  {
     console.log(error);
