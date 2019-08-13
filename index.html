@@ -7,7 +7,7 @@
     <title>StudySesh</title>
     <link rel="stylesheet" href="sketch.css">
     <script src="main.js" defer></script>   
-    <script src="schools.js"></script>
+    <script src="message.js" defer></script> 
     
 </head>
 <body>
@@ -90,12 +90,13 @@
               </div>
           </div>  
           <div class="dropdown" id = "NewChat">
-              <button class="dropbtn" onclick = "sessionCode()">Create new chat</button>
+              <button class="dropbtn" id="randCodeGen" onclick = "sessionCode()">Create new chat</button>
               <button class="dropbtn" onclick = "insertSessionCode()">Join a chat</button>
           </div> 
           <form id = "CodeForm">
               <br>
-              <input type="text" id="CodeEnter" placeholder= "Code1">
+              <input type="text" id="CodeEnter" placeholder= "Code1"> 
+              <button>Join!</button> 
             </form>
       <h1 id="randomGenerator"></h1>
       

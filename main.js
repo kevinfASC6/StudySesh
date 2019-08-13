@@ -6,6 +6,7 @@ let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementsByClassName("BackSubject"); 
 let displayRanGen = document.getElementById("randomGenerator");   
+let redirectMsg = document.getElementById('redirMsg');  
 function findPlace(name) {
   var x = document.getElementsByClassName("dropdown")[0]
     console.log('nani')
