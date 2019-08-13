@@ -89,6 +89,7 @@ Selected.innerText = "History"
 x.style.display = "none"
 a.style.display = "block"
 }
+// Hi Kevin
 scienceSubject.addEventListener("click",filldiv3)
 function filldiv3(){
 var x = document.getElementsByClassName("dropdown")[0]
