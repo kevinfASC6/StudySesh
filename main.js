@@ -162,3 +162,5 @@ function insertSessionCode(){
 Join.style.display = "block"
 displayRanGen.style.display = "none"
 }
+
+
