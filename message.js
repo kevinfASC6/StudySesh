@@ -3,8 +3,8 @@ const messageElement = document.getElementById("message");
 const button = document.getElementById("submitButton"); 
 const roomCode = localStorage.getItem("randCodeGen"); 
 button.addEventListener('click',updateDB);
-
 //Set database object here
+console.log(roomCode)
 const database = firebase.database().ref(roomCode)
 
 /**

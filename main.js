@@ -11,7 +11,7 @@ let redirectMsg = document.getElementById('redirMsg');
 redirectMsg.addEventListener('click', readMsg); 
 
 function readMsg() { 
-  localStorage.setItem("randCodeGen",document.getElementById("CodeEnter"));
+  localStorage.setItem("randCodeGen",document.getElementById("CodeEnter").value);
   window.location.href = "message.html"
 }
 
