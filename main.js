@@ -28,6 +28,8 @@ function showSubject(){
 
 search.addEventListener('click', searchPlace); 
 function findPlace(name) {
+  var x = document.getElementsByClassName("dropdown")[0]
+    console.log('nani')
     let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
     fetch(url) 
     .then((response) => response.json()) 
@@ -42,6 +44,18 @@ function findPlace(name) {
     console.log(error);
     })
 }
+var x = document.getElementsByClassName("dropdown")[0]
+let SelectedCourse = document.getElementById("BackCourse");
+document.getElementById("schoolForm").style.width= "40vw";
+document.getElementById("schoolForm").style.fontStyle="14pt";
+function showSubject(){
+  if(SchoolName != ""){
+  x.style.display = "block";
+  }
+} 
+let search = document.getElementsByClassName("Submit")[0];
+let inputVal = document.getElementById("schoolForm")
+search.addEventListener('click', searchPlace); 
 function searchPlace() {  
 let value = inputVal.value 
 if(value.toLowerCase() === value.toLowerCase())
@@ -79,9 +93,8 @@ scienceSubject.addEventListener("click",filldiv3)
 function filldiv3(){
 var x = document.getElementsByClassName("dropdown")[0]
 Selected.innerText = "Science"
-d.style.display = "block"
-x.style.display = "none"
 b.style.display = "block"
+x.style.display = "none"
 }
 englishSubject.addEventListener("click",filldiv4)
 function filldiv4(){
@@ -117,4 +130,26 @@ function reset(){
   c.style.display = "none"
   d.style.display = "none"
   x.style.display = "block"
+  displayRanGen.innerText = ""
+  Create.style.display = "none"
+}
+
+function sessionCode(){
+  displayRanGen.style.display = "block"
+  Join.style.display = "none"
+}
+Create = document.getElementById('NewChat')
+Join = document.getElementById('CodeForm')
+function showCreateJoin(){
+  y.style.display = "none"
+  a.style.display = "none"
+  b.style.display = "none"
+  c.style.display = "none"
+  d.style.display = "none"
+  Create.style.display = "inline"
+}
+
+function insertSessionCode(){
+Join.style.display = "block"
+displayRanGen.style.display = "none"
 }
