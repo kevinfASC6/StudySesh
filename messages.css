@@ -1,0 +1,37 @@
+.userContainer{
+    display: flex;
+    justify-content: center;
+
+}
+#inputForm{
+background-color: darkmagenta;
+width:200px;
+}
+
+.allMessages{
+    background-color: palevioletred;
+    height: 300px;
+
+}
+#Header{
+    background: linear-gradient(to bottom, lavender, purple);
+    margin: none;
+    margin-bottom: 20px;
+    width:100%
+}
+h1{
+    margin-block-start: 0%;
+    display:flex;
+    justify-content: center;
+    margin-bottom:0px;
+}
+body{
+    margin:0px;
+}
+#BoxContent{
+    margin-top: 0px;
+    background-color:royalblue;
+    padding:20px;
+    margin-left:10%;
+    margin-right:10%;
+}
