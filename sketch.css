@@ -1,12 +1,7 @@
 body{
   background-color: lavender;
-<<<<<<< HEAD
-  margin-right: 0px;
-  margin-left: 0px;
-=======
   margin-left: 0px;
     margin-right: 0px;
->>>>>>> 363c0de0eb365dbe983fd2498d2080e2885132ed
 }
 #SchoolName{
     display: flex;
