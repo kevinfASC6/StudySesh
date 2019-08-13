@@ -72,7 +72,7 @@ scienceSubject.addEventListener("click",filldiv3)
 function filldiv3(){
 var x = document.getElementsByClassName("dropdown")[0]
 Selected.innerText = "Science"
-d.style.display = "block"
+b.style.display = "block"
 x.style.display = "none"
 }
 englishSubject.addEventListener("click",filldiv4)
