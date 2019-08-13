@@ -26,7 +26,7 @@ var uiConfig = {
         // Terms of service url/callback.
         tosUrl: 'https://google.com',
         // Privacy policy url/callback.
-        privacyPolicyUrl: 'https://google.com'
+        privacyPolicyUrl: 'google.com'
       };
 
       // Initialize the FirebaseUI Widget using Firebase.
