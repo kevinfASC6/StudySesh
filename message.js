@@ -42,4 +42,8 @@ function addMessageToBoard(rowData) {
     pElement.innerHTML = `${row.USERNAME}: ${row.MESSAGE}`  
 
     messageBoard.appendChild(pElement)
+} 
+
+window.onload = function(){
+    console.log(localStorage.getItem("randCodeGen"));
 }

@@ -25,7 +25,9 @@ function findPlace(name) {
         let name = data.location_name 
         console.log(name)      
         console.log(makeid(5));   
-        displayRanGen.innerText = "Your Code is: " + makeid(5)
+        var code =makeid(5)
+        displayRanGen.innerText = "Your Code is: " + code
+        localStorage.setItem("randCodeGen",code);
     })
     .catch(function(error)  {
     console.log(error);
@@ -161,6 +163,5 @@ function showCreateJoin(){
 function insertSessionCode(){
 Join.style.display = "block"
 displayRanGen.style.display = "none"
-}
-
+} 
 
