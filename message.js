@@ -1,26 +1,16 @@
 const usernameElement = document.getElementById("username");
 const messageElement = document.getElementById("message");
-const button = document.getElementById("submitButton");   
-let randCode = document.getElementById('CodeForm')
-let randCodes = document.getElementById('randCodeGen') 
-let roomCode = randCodes.value 
-button.addEventListener("click",updateDB);
+const button = document.getElementById("submitButton");
+button.addEventListener('click',updateDB);
 
 //Set database object here
-const database = firebase.database().ref(roomCode)
+const database = firebase.database().ref()
 
 /**
  * Updates the database with the username and message.
- */  
-
-let randCode = document.getElementById('CodeForm')
-
-database.on('child_added', displayMessage) 
-function displayMessage(row) { 
-    var message = row.value(); 
-    console.log(message)
-}
+ */
 function updateDB(event){
+    if(username != " " || message != ""){
     event.preventDefault();
     const username        = usernameElement.value;
     const message         = messageElement.value;
@@ -36,6 +26,7 @@ function updateDB(event){
         MESSAGE: message
     } 
     database.push(messageObj)
+    }
 }
 
 // Set database "child_added" event listener here 
