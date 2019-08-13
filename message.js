@@ -1,7 +1,7 @@
 const usernameElement = document.getElementById("username");
 const messageElement = document.getElementById("message");
-const button = document.getElementById("submitButton");
-button.addEventListener("click",updateDB);
+let button = document.getElementById("submitButton");
+button.addEventListener('click',updateDB);
 
 //Set database object here
 const database = firebase.database().ref()
@@ -10,6 +10,7 @@ const database = firebase.database().ref()
  * Updates the database with the username and message.
  */
 function updateDB(event){
+    if(username != " " || message != ""){
     event.preventDefault();
     const username        = usernameElement.value;
     const message         = messageElement.value;
@@ -25,6 +26,7 @@ function updateDB(event){
         MESSAGE: message
     } 
     database.push(messageObj)
+    }
 }
 
 // Set database "child_added" event listener here 

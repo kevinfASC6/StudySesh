@@ -6,6 +6,14 @@ let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementsByClassName("BackSubject"); 
 let displayRanGen = document.getElementById("randomGenerator");   
+let redirectMsg = document.getElementById('redirMsg');  
+
+redirectMsg.addEventListener('click', readMsg); 
+
+function readMsg() { 
+  window.location.href = "message.html"
+}
+
 function findPlace(name) {
   var x = document.getElementsByClassName("dropdown")[0]
     console.log('nani')
@@ -24,7 +32,7 @@ function findPlace(name) {
     })
 }
 var x = document.getElementsByClassName("dropdown")[0]
- SelectedCourse = document.getElementById("BackCourse");
+let SelectedCourse = document.getElementById("BackCourse");
 document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
 function showSubject(){
@@ -32,8 +40,8 @@ function showSubject(){
   x.style.display = "block";
   }
 } 
- search = document.getElementsByClassName("Submit")[0];
- inputVal = document.getElementById("schoolForm")
+let search = document.getElementsByClassName("Submit")[0];
+let inputVal = document.getElementById("schoolForm")
 search.addEventListener('click', searchPlace); 
 function searchPlace() {  
 let value = inputVal.value 
@@ -154,3 +162,5 @@ function insertSessionCode(){
 Join.style.display = "block"
 displayRanGen.style.display = "none"
 }
+
+
