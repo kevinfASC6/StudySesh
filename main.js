@@ -5,10 +5,19 @@ let scienceSubject = document.getElementById("Science");
 let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementsByClassName("BackSubject"); 
-let displayRanGen = document.getElementById("randomGenerator");   
-
+let displayRanGen = document.getElementById("randomGenerator");  
+let search = document.getElementsByClassName("Submit")[0];
+let inputVal = document.getElementById("schoolForm") 
 var x = document.getElementsByClassName("dropdown")[0]
 let SelectedCourse = document.getElementById("BackCourse");
+
+  
+
+function makeRand() { 
+  displayRanGen.innerText = "Your Code: " + makeid(5)
+}
+
+
 document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
 function showSubject(){
@@ -16,8 +25,7 @@ function showSubject(){
   x.style.display = "block";
   }
 } 
-let search = document.getElementsByClassName("Submit")[0];
-let inputVal = document.getElementById("schoolForm")
+
 search.addEventListener('click', searchPlace); 
 function findPlace(name) {
     let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
@@ -28,7 +36,7 @@ function findPlace(name) {
         let name = data.location_name 
         console.log(name)      
         console.log(makeid(5));   
-        displayRanGen.innerText = "Your Code: " + makeid(5)
+      
     }) 
     .catch(function(error)  {
     console.log(error);
@@ -100,7 +108,7 @@ function makeid(length) {
   } 
   return result;   
 } 
-console.log(makeid(5)); 
+ 
 
 function reset(){
   y.style.display = "none"
