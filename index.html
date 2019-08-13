@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>StudySesh</title>
     <link rel="stylesheet" href="sketch.css">
-    <script src="main.js" defer></script>  
-    <script src="https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Vict&types=(cities)&language=pt_BR&key=AIzaSyBsVU8iuiiMfk9uT7CKBQZDGUUdIxfu0FA" async defer></script>
+    <script src="main.js" defer></script>   
+    <script src="message.js" defer></script> 
+    
 </head>
 <body>
     <div id = "header">
         <h1>Study</h1>
+        <img src="LogoConcept.jpg">
         <h1>Sesh</h1>
     </div>
     <div id = "SchoolName">
@@ -19,20 +21,84 @@
             <br>
             <input type="text" placeholder="School Name" id = "schoolForm"><br>
           </form>
+          <button type="submit" class = "Submit" onclick="showSubject()"> Submit</button>
+          <div class = "SubjectSelect">
+              <button type="submit" class = "BackSubject" onclick = "reset()">Back</button>
+            </div>
+            <!-- <div id = "CourseSelect">
+              <button type="submit" id = "CourseSubject"></button>
+            </div> -->
     </div>
-
         <div class="dropdown">
             <button class="dropbtn">Subjects</button>
             <div class="dropdown-content">
-              <a href="#">Math</a>
-              <a href="#">History</a>
-              <a href="#">Science</a>
-              <a href="#">English</a>
-              <a href="#">World Language</a>
+              <a href="#"  id = "Math" onclick="filldiv1()" >Math</a>
+              <a href="#" id = "History" onclick="filldiv2()">History</a>
+              <a href="#" id = "Science" onclick="filldiv3()">Science</a>
+              <a href="#" id = "English"onclick="filldiv4()">English</a>
+              <a href="#" id = "WorldLanguage"onclick="filldiv5()">World Language</a>
             </div>
           </div>
-    <div id = "CourseChosen">
-        <!-- dropdown -->
-    </div>
+          <div class="dropdown">
+              <button class="dropbtn"> Math Courses</button>
+              <div class="dropdown-content">
+                <a href="#" onclick = "showCreateJoin()">Algebra 1</a>
+                <a href="#" onclick = "showCreateJoin()">Algebra 2</a>
+                <a href="#" onclick = "showCreateJoin()">Geometry</a>
+                <a href="#" onclick = "showCreateJoin()">Trigonemetry</a>
+                <a href="#" onclick = "showCreateJoin()">Calculus</a>
+              </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">History Courses</button>
+              <div class="dropdown-content">
+                <a href="#" onclick = "showCreateJoin()"id = "Math">Global</a>
+                <a href="#" onclick = "showCreateJoin()"id = "History">American</a>
+                <a href="#" onclick = "showCreateJoin()"id = "Science">Expansion of the New World</a>
+                <a href="#" onclick = "showCreateJoin()"id = "English" >Colonial Times</a>
+                <a href="#" onclick = "showCreateJoin()"id = "WorldLanguage" >Modern History</a>
+              </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Science Courses</button>
+              <div class="dropdown-content">
+                <a href="#" onclick = "showCreateJoin()"id = "Math">Chemistry</a>
+                <a href="#" onclick = "showCreateJoin()"id = "History">Biology</a>
+                <a href="#" onclick = "showCreateJoin()"id = "Science"  >Earth Science</a>
+                <a href="#" onclick = "showCreateJoin()"id = "English" >Physics</a>
+                <a href="#" onclick = "showCreateJoin()"id = "WorldLanguage" >AP Environmental Science</a>
+              </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">English Courses</button>
+              <div class="dropdown-content">
+                <a href="#" onclick = "showCreateJoin()"id = "Math">Shakespeare</a>
+                <a href="#" onclick = "showCreateJoin()"id = "History">Heroes, Myths and Legends</a>
+                <a href="#" onclick = "showCreateJoin()"id = "Science"  >American Literature</a>
+                <a href="#" onclick = "showCreateJoin()"id = "English" >Classical literature</a>
+                <a href="#" onclick = "showCreateJoin()"id = "WorldLanguage" >World Literature</a>
+              </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Language Courses</button>
+              <div class="dropdown-content">
+                <a href="#" onclick = "showCreateJoin()"id = "Math">Spanish</a>
+                <a href="#" onclick = "showCreateJoin()"id = "History">French</a>
+                <a href="#" onclick = "showCreateJoin()"id = "Science"  >Arabic</a>
+                <a href="#" onclick = "showCreateJoin()"id = "English" >Mandarin</a>
+                <a href="#" onclick = "showCreateJoin()"id = "WorldLanguage" >Italian</a>
+              </div>
+          </div>  
+          <div class="dropdown" id = "NewChat">
+              <button class="dropbtn" id="randCodeGen" onclick = "sessionCode()">Create new chat</button>
+              <button class="dropbtn" onclick = "insertSessionCode()">Join a chat</button>
+          </div> 
+          <form id = "CodeForm">
+              <br>
+              <input type="text" id="CodeEnter" placeholder= "Code1"> 
+              <button>Join!</button> 
+            </form>
+      <h1 id="randomGenerator"></h1>
+      
 </body>
 </html>
