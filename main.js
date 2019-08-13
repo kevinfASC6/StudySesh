@@ -17,7 +17,7 @@ function findPlace(name) {
         let name = data.location_name 
         console.log(name)      
         console.log(makeid(5));   
-        displayRanGen.innerText = "Your Code: " + makeid(5)
+        displayRanGen.innerText = "Your Code is: " + makeid(5)
     })
     .catch(function(error)  {
     console.log(error);
@@ -74,7 +74,6 @@ var x = document.getElementsByClassName("dropdown")[0]
 Selected.innerText = "Science"
 d.style.display = "block"
 x.style.display = "none"
-b.style.display = "block"
 }
 englishSubject.addEventListener("click",filldiv4)
 function filldiv4(){
