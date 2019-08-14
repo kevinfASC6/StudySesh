@@ -101,14 +101,14 @@ body{
         justify-content: center;
         margin-top:450px;
         width: 60%;
-        /* background-color: aqua; */
+        background-color: aqua;
     }
     #BoxContent{ 
         margin-top: 0px;
         background-color:rgb(81, 59, 90);
         padding:20px;
-        margin-left:10%;
-        margin-right:10%;
+        margin-left:00%;
+        margin-right:0%;
         height:420px;
         border: solid 3px black;
         display: flex;
@@ -118,5 +118,17 @@ body{
     .inputContainer{
         background-color: bisque;
         padding:10px;
+        width: 100%;
+    }
+    input {
+        width: 100%;
+      }
+    #Username{
+        font-size: 16px;
+    }
+    #WebTitle{
+        margin-block-start:6px;
+        font-size: 16px;
+
     }
   }
