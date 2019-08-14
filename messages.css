@@ -53,8 +53,8 @@ body{
     overflow-x: hidden;
     height: 400px;
     width:50%;
-    border: solid 3px lawngreen;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    border: solid 3px rgb(0, 0, 0);
+    /* font-family: "Comic Sans MS", "Comic Sans", cursive; */
 }
 ::-webkit-scrollbar {
     width: 10px;
