@@ -83,7 +83,7 @@ body{
       height:20px;
   }
 
-  @media only screen and (max-width: 414px){
+  @media only screen and (max-width: 1211px){
     .allMessages{
         background: linear-gradient(lavender,purple);
         justify-content: flex-start;
@@ -99,7 +99,7 @@ body{
     #userContainer{
         display: flex;
         justify-content: center;
-        margin-top:420px;
+        margin-top:450px;
         width: 60%;
         /* background-color: aqua; */
     }
@@ -109,10 +109,14 @@ body{
         padding:20px;
         margin-left:10%;
         margin-right:10%;
-        height:520px;
+        height:420px;
         border: solid 3px black;
         display: flex;
         justify-content: center;
         flex-wrap: wrap
+    }
+    .inputContainer{
+        background-color: bisque;
+        padding:10px;
     }
   }
