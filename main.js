@@ -34,14 +34,35 @@ let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementsByClassName("BackSubject"); 
 let displayRanGen = document.getElementById("randomGenerator");   
-let redirectMsg = document.getElementById('redirMsg');  
+let redirectMsg = document.getElementById('redirMsg');   
+let randCodeGen = document.getElementById("randCodeGen") 
+
+randCodeGen.addEventListener('click', enRoom)   
+
+var code;
+function enRoom() { 
+  const database = firebase.database().ref(code)
+  const messageObj = { 
+      USERNAME: "StudySesh", 
+      MESSAGE: `Welcome to your new room! Your room code is ${code}`
+  } 
+  database.push(messageObj).then(() =>{
+    localStorage.setItem("randCodeGen",code)
+    window.location.href = 'message.html'
+  })
+}
+
 
 redirectMsg.addEventListener('click', readMsg); 
 
 function readMsg() { 
-  localStorage.setItem("randCodeGen",document.getElementById("CodeEnter").value);
-  window.location.href = "message.html"
+  //if document.getElementById("CodeEnter").value is an existing table in the databse then set then localStorage.setItem("randCodeGen",document.getElementById("CodeEnter").value);
+  checkForRoom(document.getElementById("CodeEnter").value,function(){
+    localStorage.setItem("randCodeGen",document.getElementById("CodeEnter").value);
+    window.location.href = "message.html"
+  })
 }
+
 
 function findPlace(name) {
   var x = document.getElementsByClassName("dropdown")[0]
@@ -50,19 +71,23 @@ function findPlace(name) {
     fetch(url) 
     .then((response) => response.json()) 
     .then(function(data) { 
-        console.log(data);  
-        let name = data.location_name 
-        console.log(name)      
-        console.log(makeid(5));   
-        var code =makeid(5)
-        displayRanGen.innerText = "Your Code is: " + code
-
+        code = makeid(5)
     })
     .catch(function(error)  {
     console.log(error);
     })
+} 
+
+function checkForRoom(code,callback) {
+    let databaseRef = firebase.database().ref(code)
+    databaseRef.on("value",function(data){
+      if(data.val() != null){
+        callback()
+      }
+    })
 }
-var x = document.getElementsByClassName("dropdown")[0];
+
+var x = document.getElementsByClassName("dropdown")[0]
 let SelectedCourse = document.getElementById("BackCourse");
 document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
@@ -75,9 +100,9 @@ let search = document.getElementsByClassName("Submit")[0];
 let inputVal = document.getElementById("schoolForm")
 search.addEventListener('click', searchPlace); 
 function searchPlace() {  
-let value = inputVal.value 
-if(value.toLowerCase() === value.toLowerCase())
-findPlace(value.trim());
+  let value = inputVal.value 
+  if(value.toLowerCase() === value.toLowerCase())
+  findPlace(value.trim());
 }
 //let Course = document.getElementById("BackCourse").innerText
 let math = document.getElementById("Math")
