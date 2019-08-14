@@ -40,7 +40,7 @@ function addMessageToBoard(rowData) {
     console.log(row) 
 
     const pElement = document.createElement("p") 
-    pElement.innerText = `${row.USERNAME}: ${row.MESSAGE}`  
+    pElement.innerHTML = `${row.USERNAME}: ${row.MESSAGE}`  
 
     messageBoard.appendChild(pElement)
 } 
