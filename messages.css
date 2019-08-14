@@ -54,7 +54,7 @@ body{
     height: 400px;
     width:50%;
     border: solid 3px black;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Sans MS", "Comic Sans";
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -94,12 +94,12 @@ body{
         height: 400px;
         width:70%;
         border: solid 3px black;
-        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        font-family: "Comic Sans MS", "Comic Sans";
     }
     #userContainer{
         display: flex;
         justify-content: center;
-        margin-top:450px;
+        margin-top:430px;
         width: 60%;
         background-color: aqua;
     }
@@ -109,7 +109,7 @@ body{
         padding:20px;
         margin-left:00%;
         margin-right:0%;
-        height:420px;
+        height:400px;
         border: solid 3px black;
         display: flex;
         justify-content: center;
@@ -126,9 +126,12 @@ body{
     #Username{
         font-size: 16px;
     }
-    #WebTitle{
+    #Web{
         margin-block-start:6px;
         font-size: 16px;
 
+    }
+    #Header{
+        margin-bottom:5px;
     }
   }
