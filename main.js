@@ -218,4 +218,6 @@ function insertSessionCode(){
 Join.style.display = "block"
 displayRanGen.style.display = "none"
 } 
-
+function RedirecttoLogin(){
+  window.location.href = "login.html"
+}
