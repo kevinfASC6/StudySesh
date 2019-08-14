@@ -1,3 +1,30 @@
+var firebaseConfig = {
+  apiKey: "AIzaSyDXqHdzV8IoYakz4tr5rhDHL4NAfXTh4ak",
+  authDomain: "study-sesh-10dbf.firebaseapp.com",
+  databaseURL: "https://study-sesh-10dbf.firebaseio.com",
+  projectId: "study-sesh-10dbf",
+  storageBucket: "study-sesh-10dbf.appspot.com",
+  messagingSenderId: "527300603970",
+  appId: "1:527300603970:web:d0cd1d4569892599"
+};
+firebase.initializeApp(firebaseConfig);
+
+function initApp(){
+  firebase.auth().onAuthStateChanged(function(user){
+    if(user){
+      console.log(user)
+    } else {
+      //If user isn't logged in 
+    }
+  },function(error){
+    console.lof(error)
+  })
+}
+
+window.addEventListener('load',function(){
+  initApp()
+})
+
 let SchoolName = document.getElementById("SchoolName").innerText
 let mathSubject = document.getElementById("Math");
 let historySubject = document.getElementById("History");
