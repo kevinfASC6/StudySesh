@@ -99,7 +99,6 @@ body{
         justify-content: center;
         margin-top:430px;
         width: 60%;
-        background-color: aqua;
     }
     #BoxContent{ 
         margin-top: 0px;
@@ -132,4 +131,7 @@ body{
     #Header{
         margin-bottom:5px;
     }
+    .inputContainer{
+        background-color: transparent;
   }
+}
