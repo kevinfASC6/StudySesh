@@ -40,7 +40,7 @@ body{
     height:400px;
 }
 .allMessages{
-    background-color: palevioletred;
+    background: linear-gradient(lavender,purple) ;
     overflow-wrap:break-word;
     position:absolute;
     overflow:scroll;
