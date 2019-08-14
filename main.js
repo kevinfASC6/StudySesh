@@ -26,7 +26,7 @@ window.addEventListener('load',function(){
   initApp()
 })
 
-let SchoolName = document.getElementById("SchoolName").innerText
+let SchoolName = document.getElementById("schoolForm")//.innerText
 let mathSubject = document.getElementById("Math");
 let historySubject = document.getElementById("History");
 let scienceSubject = document.getElementById("Science");
@@ -62,14 +62,14 @@ function findPlace(name) {
     console.log(error);
     })
 }
-var x = document.getElementsByClassName("dropdown")[0]
+var x = document.getElementsByClassName("dropdown")[0];
 let SelectedCourse = document.getElementById("BackCourse");
 document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
 function showSubject(){
   if(SchoolName != ""){
   x.style.display = "block";
-  }
+    } 
 } 
 let search = document.getElementsByClassName("Submit")[0];
 let inputVal = document.getElementById("schoolForm")

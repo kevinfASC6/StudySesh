@@ -82,3 +82,41 @@ body{
       margin-block-start:6px;
       height:20px;
   }
+
+  @media only screen and (max-width: 1211px){
+    .allMessages{
+        background: linear-gradient(lavender,purple);
+        justify-content: flex-start;
+        overflow-wrap:break-word;
+        position:absolute;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        height: 400px;
+        width:70%;
+        border: solid 3px black;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+    }
+    #userContainer{
+        display: flex;
+        justify-content: center;
+        margin-top:450px;
+        width: 60%;
+        /* background-color: aqua; */
+    }
+    #BoxContent{ 
+        margin-top: 0px;
+        background-color:rgb(81, 59, 90);
+        padding:20px;
+        margin-left:10%;
+        margin-right:10%;
+        height:420px;
+        border: solid 3px black;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap
+    }
+    .inputContainer{
+        background-color: bisque;
+        padding:10px;
+    }
+  }

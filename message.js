@@ -11,22 +11,22 @@ const database = firebase.database().ref(roomCode)
  * Updates the database with the username and message.
  */
 function updateDB(event){
-    if(username != " " || message != ""){
-    event.preventDefault();
-    const username        = usernameElement.value;
-    const message         = messageElement.value;
+    if(usernameElement.value.length > 0 && messageElement.value.length > 0){
+        event.preventDefault();
+        const username        = usernameElement.value;
+        const message         = messageElement.value;
 
-    usernameElement.value = "";
-    messageElement.value  = "";
+        usernameElement.value = "";
+        messageElement.value  = "";
 
-    console.log(username + " : " + message);
+        console.log(username + " : " + message);
 
-    //Update database here
-    const messageObj = { 
-        USERNAME: username, 
-        MESSAGE: message
-    } 
-    database.push(messageObj)
+        //Update database here
+        const messageObj = { 
+            USERNAME: username, 
+            MESSAGE: message
+        } 
+        database.push(messageObj)
     }
 }
 
@@ -37,17 +37,13 @@ const messageBoard = document.getElementsByClassName("allMessages")[0]
 
 function addMessageToBoard(rowData) { 
     const row = rowData.val() 
-    console.log(row) 
-
+    console.log(row)  
     const pElement = document.createElement("p") 
-    if(username != " "){
-    if(row.message != "<"){
     pElement.innerText = `${row.USERNAME}: ${row.MESSAGE}`  
 
-    messageBoard.appendChild(pElement)``
-} 
+    messageBoard.appendChild(pElement)
 }
-}
+
 window.onload = function(){
     console.log(roomCode);
 }
