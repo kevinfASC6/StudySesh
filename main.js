@@ -39,9 +39,13 @@ let redirectMsg = document.getElementById('redirMsg');
 redirectMsg.addEventListener('click', readMsg); 
 
 function readMsg() { 
-  localStorage.setItem("randCodeGen",document.getElementById("CodeEnter").value);
-  window.location.href = "message.html"
+  //if document.getElementById("CodeEnter").value is an existing table in the databse then set then localStorage.setItem("randCodeGen",document.getElementById("CodeEnter").value);
+  checkForRoom(document.getElementById("CodeEnter").value,function(){
+    localStorage.setItem("randCodeGen",document.getElementById("CodeEnter").value);
+    window.location.href = "message.html"
+  })
 }
+
 
 function findPlace(name) {
   var x = document.getElementsByClassName("dropdown")[0]
@@ -61,7 +65,17 @@ function findPlace(name) {
     .catch(function(error)  {
     console.log(error);
     })
+} 
+
+function checkForRoom(code,callback) {
+    let databaseRef = firebase.database().ref(code)
+    databaseRef.on("value",function(data){
+      if(data.val() != null){
+        callback()
+      }
+    })
 }
+
 var x = document.getElementsByClassName("dropdown")[0]
 let SelectedCourse = document.getElementById("BackCourse");
 document.getElementById("schoolForm").style.width= "40vw";
