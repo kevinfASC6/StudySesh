@@ -35,7 +35,7 @@ h1{
 body{
     margin:0px;
     background-color: rgb(233, 183, 253);
-}
+} 
 #BoxContent{ 
     margin-top: 0px;
     background-color:rgb(81, 59, 90);
@@ -43,6 +43,7 @@ body{
     margin-left:10%;
     margin-right:10%;
     height:400px;
+    border: solid 3px black;
 }
 .allMessages{
     background: linear-gradient(lavender,purple) ;
