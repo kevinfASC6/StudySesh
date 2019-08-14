@@ -54,7 +54,7 @@ body{
     height: 400px;
     width:50%;
     border: solid 3px black;
-    font-family: "Comic Sans MS", "Comic Sans";
+    font-family: "Comic Sans";
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -94,7 +94,7 @@ body{
         height: 400px;
         width:70%;
         border: solid 3px black;
-        font-family: "Comic Sans MS", "Comic Sans";
+        font-family: "Comic Sans";
     }
     #userContainer{
         display: flex;
