@@ -44,7 +44,7 @@ function enRoom() {
   const database = firebase.database().ref(code)
   const messageObj = { 
       USERNAME: "StudySesh", 
-      MESSAGE: "Welcome to your new room!"
+      MESSAGE: `Welcome to your new room! Your room code is ${code}`
   } 
   database.push(messageObj).then(() =>{
     localStorage.setItem("randCodeGen",code)
