@@ -93,7 +93,7 @@ body{
         overflow-x: hidden;
         height: 400px;
         width:70%;
-        border: solid 3px lawngreen;
+        border: solid 3px black;
         font-family: "Comic Sans MS", "Comic Sans", cursive;
     }
     #userContainer{
