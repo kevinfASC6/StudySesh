@@ -26,7 +26,7 @@ window.addEventListener('load',function(){
   initApp()
 })
 
-let SchoolName = document.getElementById("SchoolName").innerText
+let SchoolName = document.getElementById("schoolForm")
 let mathSubject = document.getElementById("Math");
 let historySubject = document.getElementById("History");
 let scienceSubject = document.getElementById("Science");
@@ -66,7 +66,6 @@ function readMsg() {
 
 function findPlace(name) {
   var x = document.getElementsByClassName("dropdown")[0]
-    console.log('nani')
     let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
     fetch(url) 
     .then((response) => response.json()) 
@@ -92,18 +91,25 @@ let SelectedCourse = document.getElementById("BackCourse");
 document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
 function showSubject(){
-  if(SchoolName != ""){
-  x.style.display = "block";
+  if(SchoolName.value.length > 0){
+    x.style.display = "block";
+    let value = inputVal.value;
+    if(value.toLowerCase() === value.toLowerCase())
+      findPlace(value.trim());
+  }
+  else{
+    console.log("alert!!!")
+    alert("Make sure to enter a school!")
   }
 } 
 let search = document.getElementsByClassName("Submit")[0];
 let inputVal = document.getElementById("schoolForm")
-search.addEventListener('click', searchPlace); 
-function searchPlace() {  
-  let value = inputVal.value 
-  if(value.toLowerCase() === value.toLowerCase())
-  findPlace(value.trim());
-}
+// search.addEventListener('click', searchPlace); 
+// function searchPlace() {  
+//   let value = inputVal.value;
+//   if(value.toLowerCase() === value.toLowerCase())
+//   findPlace(value.trim());
+// }
 //let Course = document.getElementById("BackCourse").innerText
 let math = document.getElementById("Math")
 let history = document.getElementById("History")
@@ -165,7 +171,6 @@ function makeid(length) {
   } 
   return result;   
 } 
-console.log(makeid(5)); 
 
 function reset(){
   y.style.display = "none"
