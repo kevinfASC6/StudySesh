@@ -11,7 +11,7 @@ const database = firebase.database().ref(roomCode)
  * Updates the database with the username and message.
  */
 function updateDB(event){
-    if(usernameElement.value != " " || messageElement.value != ""){
+    if(usernameElement.value.length > 0 && messageElement.value.length > 0){
     event.preventDefault();
     const username        = usernameElement.value;
     const message         = messageElement.value;
