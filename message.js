@@ -37,13 +37,12 @@ const messageBoard = document.getElementsByClassName("allMessages")[0]
 
 function addMessageToBoard(rowData) { 
     const row = rowData.val() 
-    console.log(row) 
-
+    console.log(row)  
     const pElement = document.createElement("p") 
     pElement.innerHTML = `${row.USERNAME}: ${row.MESSAGE}`  
 
     messageBoard.appendChild(pElement)
-} 
+}
 
 window.onload = function(){
     console.log(roomCode);
