@@ -1,11 +1,9 @@
 #inputForm{
     background-color: darkmagenta;
     margin: 0;
-    display: flex;
-    align-content: right;
     /* margin-left: 50px; */
 }
-.userContainer{
+#userContainer{
     display:flex;
     justify-content: flex-end;
     /* background-color: aqua; */
@@ -13,9 +11,6 @@
 .inputContainer{
     background-color: bisque;
     padding:10px
-}
-.allMessages{
-    background-color: palevioletred;
 }
 #Header{
     background: linear-gradient(to bottom, lavender, purple);
@@ -42,4 +37,8 @@ body{
     padding:20px;
     margin-left:10%;
     margin-right:10%;
+}
+.allMessages{
+    background-color: palevioletred;
+    overflow-wrap:break-word;
 }
