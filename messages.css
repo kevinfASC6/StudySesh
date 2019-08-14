@@ -53,8 +53,7 @@ body{
     overflow-x: hidden;
     height: 400px;
     width:50%;
-    border: solid 3px black;
-    font-family: "Comic Sans";
+    border: solid 3px black
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -94,7 +93,6 @@ body{
         height: 400px;
         width:70%;
         border: solid 3px black;
-        font-family: "Comic Sans";
     }
     #userContainer{
         display: flex;
