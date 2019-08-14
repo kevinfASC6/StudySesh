@@ -34,7 +34,15 @@ let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementsByClassName("BackSubject"); 
 let displayRanGen = document.getElementById("randomGenerator");   
-let redirectMsg = document.getElementById('redirMsg');  
+let redirectMsg = document.getElementById('redirMsg');   
+let randCodeGen = document.getElementById("randCodeGen") 
+
+randCodeGen.addEventListener('click', enRoom)   
+
+function enRoom() { 
+  window.location.href = 'message.html'
+}
+
 
 redirectMsg.addEventListener('click', readMsg); 
 
