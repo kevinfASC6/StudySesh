@@ -39,8 +39,17 @@ let randCodeGen = document.getElementById("randCodeGen")
 
 randCodeGen.addEventListener('click', enRoom)   
 
+var code;
 function enRoom() { 
-  window.location.href = 'message.html'
+  const database = firebase.database().ref(code)
+  const messageObj = { 
+      USERNAME: "StudySesh", 
+      MESSAGE: "Welcome to your new room!"
+  } 
+  database.push(messageObj).then(() =>{
+    localStorage.setItem("randCodeGen",code)
+    window.location.href = 'message.html'
+  })
 }
 
 
@@ -62,13 +71,7 @@ function findPlace(name) {
     fetch(url) 
     .then((response) => response.json()) 
     .then(function(data) { 
-        console.log(data);  
-        let name = data.location_name 
-        console.log(name)      
-        console.log(makeid(5));   
-        var code =makeid(5)
-        displayRanGen.innerText = "Your Code is: " + code
-
+        code = makeid(5)
     })
     .catch(function(error)  {
     console.log(error);
@@ -97,9 +100,9 @@ let search = document.getElementsByClassName("Submit")[0];
 let inputVal = document.getElementById("schoolForm")
 search.addEventListener('click', searchPlace); 
 function searchPlace() {  
-let value = inputVal.value 
-if(value.toLowerCase() === value.toLowerCase())
-findPlace(value.trim());
+  let value = inputVal.value 
+  if(value.toLowerCase() === value.toLowerCase())
+  findPlace(value.trim());
 }
 //let Course = document.getElementById("BackCourse").innerText
 let math = document.getElementById("Math")
