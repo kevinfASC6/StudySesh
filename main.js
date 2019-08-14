@@ -12,9 +12,10 @@ firebase.initializeApp(firebaseConfig);
 function initApp(){
   firebase.auth().onAuthStateChanged(function(user){
     if(user){
-      console.log(user)
+      console.log(user.name + " is currently logged in.")
     } else {
       //If user isn't logged in 
+      console.log("No one is logged in.")
     }
   },function(error){
     console.lof(error)

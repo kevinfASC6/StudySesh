@@ -40,11 +40,14 @@ function addMessageToBoard(rowData) {
     console.log(row) 
 
     const pElement = document.createElement("p") 
+    if(username != " "){
+    if(row.message != "<"){
     pElement.innerText = `${row.USERNAME}: ${row.MESSAGE}`  
 
-    messageBoard.appendChild(pElement)
+    messageBoard.appendChild(pElement)``
 } 
-
+}
+}
 window.onload = function(){
     console.log(roomCode);
 }
