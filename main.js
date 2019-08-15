@@ -12,13 +12,12 @@ firebase.initializeApp(firebaseConfig);
 function initApp(){
   firebase.auth().onAuthStateChanged(function(user){
     if(user){
-      console.log(user);
       console.log(user.displayName + " is currently logged in.");
       document.getElementById("loginButton").style.display ="none";
-      document.getElementById("Username").innerText = `Logged in as: ${user.displayName}`
+      document.getElementById("Username").innerHTML = `Logged in as: ${user.displayName}`
 
     } else {
-      document.getElementById("Username").innerText = `User not logged in :C`
+      document.getElementById("Username").innerHTML = `Your are not logged in :C`
       document.getElementById("loginButton").style.display = "block"
       console.log("No one is logged in.")
     }
