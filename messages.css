@@ -53,8 +53,8 @@ body{
     overflow-x: hidden;
     height: 400px;
     width:50%;
-    border: solid 3px lawngreen;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    border: solid 3px rgb(0, 0, 0);
+    /* font-family: "Comic Sans MS", "Comic Sans", cursive; */
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -82,3 +82,57 @@ body{
       margin-block-start:6px;
       height:20px;
   }
+
+  @media only screen and (max-width: 1211px){
+    .allMessages{
+        background: linear-gradient(lavender,purple);
+        justify-content: flex-start;
+        overflow-wrap:break-word;
+        position:absolute;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        height: 400px;
+        width:70%;
+        border: solid 3px black;
+    }
+    #userContainer{
+        display: flex;
+        justify-content: center;
+        margin-top:430px;
+        width: 60%;
+    }
+    #BoxContent{ 
+        margin-top: 0px;
+        background-color:rgb(81, 59, 90);
+        padding:20px;
+        margin-left:00%;
+        margin-right:0%;
+        height:400px;
+        border: solid 3px black;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap
+    }
+    .inputContainer{
+        background-color: bisque;
+        padding:10px;
+        width: 100%;
+    }
+    input {
+        width: 100%;
+      }
+    #Username{
+        font-size: 16px;
+    }
+    #Web{
+        margin-block-start:6px;
+        font-size: 16px;
+
+    }
+    #Header{
+        margin-bottom:0px;
+    }
+    .inputContainer{
+        background-color: transparent;
+  }
+}

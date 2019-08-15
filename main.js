@@ -26,7 +26,7 @@ window.addEventListener('load',function(){
   initApp()
 })
 
-let SchoolName = document.getElementById("SchoolName").innerText
+let SchoolName = document.getElementById("schoolForm")
 let mathSubject = document.getElementById("Math");
 let historySubject = document.getElementById("History");
 let scienceSubject = document.getElementById("Science");
@@ -34,41 +34,72 @@ let englishSubject = document.getElementById("English");
 let worldLanguageSubject = document.getElementById("World Language");
 let Selected = document.getElementsByClassName("BackSubject"); 
 let displayRanGen = document.getElementById("randomGenerator");   
-let redirectMsg = document.getElementById('redirMsg');  
+let redirectMsg = document.getElementById('redirMsg');   
+let randCodeGen = document.getElementById("randCodeGen") 
+
+randCodeGen.addEventListener('click', enRoom)   
+
+var code;
+function enRoom() { 
+  const database = firebase.database().ref(code)
+  const messageObj = { 
+      USERNAME: "StudySesh", 
+      MESSAGE: `Welcome to your new room! Your room code is ${code}`
+  } 
+  database.push(messageObj).then(() =>{
+    localStorage.setItem("randCodeGen",code)
+    window.location.href = 'message.html'
+  })
+}
+
 
 redirectMsg.addEventListener('click', readMsg); 
 
 function readMsg() { 
-  localStorage.setItem("randCodeGen",document.getElementById("CodeEnter").value);
-  window.location.href = "message.html"
+  //if document.getElementById("CodeEnter").value is an existing table in the databse then set then localStorage.setItem("randCodeGen",document.getElementById("CodeEnter").value);
+  checkForRoom(document.getElementById("CodeEnter").value,function(){
+    localStorage.setItem("randCodeGen",document.getElementById("CodeEnter").value);
+    window.location.href = "message.html"
+  })
 }
+
 
 function findPlace(name) {
   var x = document.getElementsByClassName("dropdown")[0]
-    console.log('nani')
     let url = `https://data.cityofnewyork.us/resource/r2nx-nhxe.json?$where=upper(location_name)=upper('${name}')`; 
     fetch(url) 
     .then((response) => response.json()) 
     .then(function(data) { 
-        console.log(data);  
-        let name = data.location_name 
-        console.log(name)      
-        console.log(makeid(5));   
-        var code =makeid(5)
-        displayRanGen.innerText = "Your Code is: " + code
-
+        code = makeid(5)
     })
     .catch(function(error)  {
     console.log(error);
     })
+} 
+
+function checkForRoom(code,callback) {
+    let databaseRef = firebase.database().ref(code)
+    databaseRef.on("value",function(data){
+      if(data.val() != null){
+        callback()
+      }
+    })
 }
+
 var x = document.getElementsByClassName("dropdown")[0]
 let SelectedCourse = document.getElementById("BackCourse");
 document.getElementById("schoolForm").style.width= "40vw";
 document.getElementById("schoolForm").style.fontStyle="14pt";
 function showSubject(){
-  if(SchoolName != ""){
-  x.style.display = "block";
+  if(SchoolName.value.length > 0){
+    x.style.display = "block";
+    let value = inputVal.value;
+    if(value.toLowerCase() === value.toLowerCase())
+      findPlace(value.trim());
+  }
+  else{
+    console.log("alert!!!")
+    alert("Make sure to enter a school!")
   }
 } 
 let search = document.getElementsByClassName("Submit")[0];
@@ -142,7 +173,6 @@ function makeid(length) {
   } 
   return result;   
 } 
-console.log(makeid(5)); 
 
 function reset(){
   y.style.display = "none"
@@ -195,7 +225,6 @@ function insertSessionCode(){
 Join.style.display = "block"
 displayRanGen.style.display = "none"
 } 
-
-document.getElementById("logo").addEventListener('click', function(){
-  window.location.href="index.html"
-})
+function RedirecttoLogin(){
+  window.location.href = "login.html"
+}
