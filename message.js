@@ -12,6 +12,7 @@ var firebaseConfig = {
   function initApp(){
     firebase.auth().onAuthStateChanged(function(user){
       if(user){
+          console.log(user);
         console.log(user.displayName + " is currently logged in.");
         document.getElementById("Username").innerHTML = `Logged in as: ${user.displayName}`
   
