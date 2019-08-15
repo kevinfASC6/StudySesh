@@ -12,7 +12,8 @@ firebase.initializeApp(firebaseConfig);
 function initApp(){
   firebase.auth().onAuthStateChanged(function(user){
     if(user){
-      console.log(user.name + " is currently logged in.")
+      console.log(user);
+      console.log(user.displayName + " is currently logged in.");
     } else {
       //If user isn't logged in 
       console.log("No one is logged in.")
@@ -103,13 +104,15 @@ function showSubject(){
   }
 } 
 let search = document.getElementsByClassName("Submit")[0];
+//search.style.display = "none";
 let inputVal = document.getElementById("schoolForm")
-// search.addEventListener('click', searchPlace); 
-// function searchPlace() {  
-//   let value = inputVal.value;
-//   if(value.toLowerCase() === value.toLowerCase())
-//   findPlace(value.trim());
-// }
+//search.addEventListener('click', searchPlace); 
+function searchPlace() { 
+search.style.display = "block";
+let value = inputVal.value 
+if(value.toLowerCase() === value.toLowerCase())
+findPlace(value.trim());
+}
 //let Course = document.getElementById("BackCourse").innerText
 let math = document.getElementById("Math")
 let history = document.getElementById("History")
