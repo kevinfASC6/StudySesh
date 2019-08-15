@@ -14,6 +14,7 @@ function initApp(){
     if(user){
       console.log(user);
       console.log(user.displayName + " is currently logged in.");
+      document.getElementById("loginButton").style.display ="none";
     } else {
       //If user isn't logged in 
       console.log("No one is logged in.")
@@ -227,5 +228,7 @@ Join.style.display = "block"
 displayRanGen.style.display = "none"
 } 
 function RedirecttoLogin(){
-  window.location.href = "login.html"
+  if(user.displayName == undefined){
+    window.location.href = "login.html"
+  }
 }
