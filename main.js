@@ -15,8 +15,11 @@ function initApp(){
       console.log(user);
       console.log(user.displayName + " is currently logged in.");
       document.getElementById("loginButton").style.display ="none";
+      document.getElementById("Username").innerText = `Logged in as: ${user.displayName}`
+
     } else {
-      //If user isn't logged in 
+      document.getElementById("Username").innerText = `User not logged in :C`
+      document.getElementById("loginButton").style.display = "block"
       console.log("No one is logged in.")
     }
   },function(error){
@@ -228,7 +231,5 @@ Join.style.display = "block"
 displayRanGen.style.display = "none"
 } 
 function RedirecttoLogin(){
-  if(user.displayName == undefined){
     window.location.href = "login.html"
-  }
 }
