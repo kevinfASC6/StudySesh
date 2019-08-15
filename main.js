@@ -12,7 +12,7 @@ firebase.initializeApp(firebaseConfig);
 function initApp(){
   firebase.auth().onAuthStateChanged(function(user){
     if(user){
-      console.log(user.name + " is currently logged in.")
+      console.log(user.displayname + " is currently logged in.")
     } else {
       //If user isn't logged in 
       console.log("No one is logged in.")
@@ -72,9 +72,11 @@ function showSubject(){
   }
 } 
 let search = document.getElementsByClassName("Submit")[0];
+//search.style.display = "none";
 let inputVal = document.getElementById("schoolForm")
-search.addEventListener('click', searchPlace); 
-function searchPlace() {  
+//search.addEventListener('click', searchPlace); 
+function searchPlace() { 
+search.style.display = "block";
 let value = inputVal.value 
 if(value.toLowerCase() === value.toLowerCase())
 findPlace(value.trim());
@@ -194,3 +196,6 @@ Join.style.display = "block"
 displayRanGen.style.display = "none"
 } 
 
+document.getElementById("logo").addEventListener('click', function(){
+  window.location.href="index.html"
+})
