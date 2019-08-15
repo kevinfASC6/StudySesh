@@ -12,10 +12,10 @@ body{
   margin-top:none;
 }
 #header{
-    display:flex;
-    justify-content: center;
+    display:left;
     flex-direction: row;
     background: linear-gradient(to bottom, lavender, purple);
+
     /* background-color: lightblue; */
 }
 #randomGenerator{
@@ -122,4 +122,20 @@ button{
   font-size: 14px;
   height:21px;
   display: inline;
+}
+#Username{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  margin-block-start:6px;
+  height:20px;
+  margin-left:40%;
+}
+.LogoStudySesh{
+  display:flex;
+  justify-content: center;
+}
+#Head{
+  display:flex;
+  justify-content: center;
 }
