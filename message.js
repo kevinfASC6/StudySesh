@@ -51,7 +51,6 @@ function updateDB(event){
         const username        = usernameElement.value;
         const message         = messageElement.value;
 
-        usernameElement.value = "";
         messageElement.value  = "";
 
         console.log(username + " : " + message);
